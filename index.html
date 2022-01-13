@@ -1,67 +1,317 @@
-<!doctype html>
-<html>
-    <head>
-    <title>Introduction</title>
-    <link rel="stylesheet" type="text/css" href="./css/style-main.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    </head>
-    
-    <body onscroll="scroll();">
-        <a name="top"></a>
-        <div name="top">
-            <!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-            NAVBAR
+  <!--
+  https://webdesign.tutsplus.com/articles/15-inspiring-examples-of-css-animation-on-codepen--cms-23937
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  -->
+  <script src="https://kit.fontawesome.com/bd21bfdb73.js"></script>
 
-            -->
-            <nav class="navbar navbar-expand-lg navbar-black bg-black fixed-top" id="nav">
-                <a class="navbar-brand" href="./index.html">Emily Xie</a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=yes">
+  <meta name="description" content="Emily Xie About">
+  <meta name="keywords" content="Emily Xie, Psychology, Computer Science, Western">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="./projects.html">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./design.html">Design Portfolio</a>
-                        </li>
-                        
-                    </ul>
+  <link rel="stylesheet" href="./style2.css">
+
+  <!-- Page Title -->
+  <title>Emily Xie</title>
+  <link rel="social" href="social.css">
+  <link rel="stylesheet" href="timeline2.css">
+  <!---Font Icon-->
+  <link href="static/plugin/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="static/plugin/themify-icons/themify-icons.css" rel="stylesheet">
+  <!-- / -->
+
+  <!-- FontAwesome Envelope icon -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+  integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144554162-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-144554162-1');
+  </script>
+
+  <!-- Plugin CSS -->
+  <link href="static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/plugin/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/plugin/magnific/magnific-popup.css" rel="stylesheet">
+  <!-- / -->
+
+  <!-- Theme Style -->
+  <link href="static/css/styles.css" rel="stylesheet">
+  <link href="static/css/default.css" rel="stylesheet" id="color_theme">
+  <!-- / -->
+
+  <link href="static/css/table.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/plugin/font-awesome/css/projects.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+  <!-- / -->
+</head>
+
+<!-- Body Start -->
+<body data-spy="scroll" data-target="#navbar" data-offset="98">
+  <!-- Loader -->
+  <div id="loading">
+    <div class="load-circle"><span class="one"></span></div>
+  </div>
+  <!--  Loader End -->
+  <!-- Header -->
+  <header>
+    <nav class="navbar header-nav-01 fixed-top navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#"> <!--Add for top left corner<span class="theme-bg"></span>--> </a>
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Top Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbar">
+          <ul class="navbar-nav ml-auto">
+            <li><a class="nav-link active" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#aboutme">About Me</a></li>
+            <li><a class="nav-link" href=".#projects">Projects</a></li>
+            <li><a class="nav-link" href="./design.html">Design Portfolio</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header End -->
+
+  <!-- main -->
+  <main>
+    <section id="home" class="home-banner-01 bg-no-repeat bg-cover bg-fixed home-bg" style="background-image: url(static/img/bg.jpg);">
+      <div id="particles-box"></div>
+        <div class="container">
+          <div class="row full-screen align-items-center">
+            <div class="col-12 col-md-12 text-center">
+              <div class="home-text">
+                <h4>Hello, My name is</h4>
+                <h5 class="font-alt">Emily Xie</h5>
+                <p><span id="type-it"></span></p>
+                <div class="btn-bar ">
+                </div>
               </div>
-            </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section id="aboutme" class="section aboutssection">
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col-md-6 text-top">
+            <img src="static/img/pfp.jpg" title="" alt="" />
+          </div>
+
+          <div class="col-md-6">
+            <div class="aboutus-text">
+              <span class="font-alt">Hello!</span>
+              <h3 class="font-alt">My name is Emily Xie</h3>
+              <p class="m">
+                I am a student at the University of Western Ontario.
+              </p>
+              <p>
+                I love learning more about the intersection of Computer Science and Psychology. I believe that technology is fundamental to the understanding of human cognition, and that human cognition shapes the technology we create.
+              </p>
+              <div id="btns">
+                <div class="about-action">
+                  <ul >
+                    <!-- <li class="btn btn-default btn-responsive">
+                        <a href=mailto: "exie5@uwo.ca" class="m-btn m-btn-theme">
+                            Email
+                        </a>
+                    </li> -->
+                    <li class="btn btn-default btn-responsive">
+                        <a href="static/resume.pdf" class="m-btn m-btn-theme">
+                            Resume
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+          <div id="social">
+            <ul style="list-style-type:none">
+              <li>
+                <a href="https://github.com/emilyxietty" target="_blank">
+                  <span class="social-icons">
+                    <i class="fab fa-github fa-3x"></i>
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.linkedin.com/in/emilyxie-2000/" target="_blank">
+                  <span class="social-icons">
+                    <i class="fab fa-linkedin fa-3x"></i>
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a href=mailto: exie5@uwo.ca>
+                  <span class="social-icons">
+                    <i class="fas fa-envelope fa-3x"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
         </div>
 
         </div>
-            <!--
+      </div> <!-- container -->
 
-            PARALLAX IMAGE
+    </section>
 
-            -->
-            <img class="banner" src="images/eb-banner.png">
+            </main>
+    <section id="projects"> 
+        
+         <h2 class="font-alt" style="color:white"><span>My Projects</span></h2>
+        
+            <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                <h3 class="font-alt" style="color:#c7eeff">Tic Tac Toe</h3>
+                <p><video  autoplay loop preload="auto" controls poster="static/vids/ttt.png">
+                	<source src="static/vids/ttt.mp4"  type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+                </video></p>
 
+                <p style="color:#c7eeff">
+                <b>Java</b><br>
+                    
+                This is a project that I created this past year for my Data Structures and Algorithm course. It's an interactive tic tac toe game between a human (user) and computer. This program demonstrates an understanding of hash tables and time complexity optimization.
+                    
+                <li>
+                    <a href="https://github.com/emilyxietty/TicTacToe-Java" target="_blank">
+                      <span class="social-icons">
+                        <i class="fab fa-github fa-3x"></i>
+                      </span>
+                    </a>
+                </li>
+                
+                    
+                </p>
+                </div>
+                <div class="col-sm">
+                      <h3 class="font-alt" style="color:#c7eeff">Sentiment Calculator</h3>
+                <img src="static/img/sent-class.png">
+                
+                <p></p>
+                <p style="color:#c7eeff">
+                    <b>VBA</b><br>
+                    This is a project made in Excel using VBA that takes Yelp Reviews and calculates their sentiments (positive or negative). This was made using VBA.
+                    Afterwards, we trained a simple AI (KNN), to make predictions based on our code.
+                
+                    
+                <li>
+                    <a href="https://github.com/emilyxietty/SentimentClassifier-VBA" target="_blank">
+                      <span class="social-icons">
+                        <i class="fab fa-github fa-3x"></i>
+                      </span>
+                    </a>
+                </li>
+                
+                    
+                </p>
+                    </div>
+                    <div class="col-sm">
+                      <h3 class="font-alt" style="color:#c7eeff">Food Business</h3>
+                <p><video  autoplay loop preload="auto" controls poster="static/vids/business.png">
+                	<source src="static/vids/business.mp4"  type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+                </video></p>
 
-            <div class="wrapper">
-                <h1>About Us</h1>
-                <p>Hi! I am a student at the University of Western Ontario studying Psychology and Computer Science. I am interested in how psychology underlies technological innovation and how technology provides insight into human cognition. I have gotten aquainted with Python, Java, C, SQL, VBA, HTML5/CSS3, JavaScript, and Arm. I love learning, and hope to further my experience in computer science!
+                <p style="color:#c7eeff">
+                <b>HTML5/CSS3, JavaScript</b><br>
+                    This is a project to create a website for a new food business. It uses bootstrap for carousels, grids, buttons, forms, and navigation!
+                    
+                <li>
+                    <a href="https://github.com/emilyxietty/FoodBusiness" target="_blank">
+                      <span class="social-icons">
+                        <i class="fab fa-github fa-3x"></i>
+                      </span>
+                    </a>
+                </li>
+                
+                    
+                </p>
+                </div>
+                    </div>
+                  </div>
 
-</p>
-                <div class="spacer"></div>
+    </section>
+     <section>
+      <div id="medium">
+        <h2 style="color: #94B3FD; text-align: center; padding: 20px;">More projects are to come, and more projects are available on my Github!</h2>
+      </div>
+    </section> 
 
-        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">GitHub</button><button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Resume</button><button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Linkedin</button>
-    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Email</button>
-    
-        <script src="js/script-scrollfire.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <span>Emily Xie</span>
+      </div>
+      <div class="text-center center-block">
+        <a href="https://www.linkedin.com/in/emilyxie-2000/" target="_blank">
+          <span class="social-icons-negative">
+            <i class="fab fa-linkedin "></i>
+          </span>
+        </a>
 
-        <script src="js/script-parallax.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+        <a href="https://www.github.com/emilyxietty" target="_blank">
+          <span class="social-icons-negative">
+            <i class="fab fa-github"></i>
+          </span>
+        </a>
+
+        <a href=mailto: "exie5@uwo.ca">
+          <span class="social-icons-negative">
+            <i class="fas fa-envelope-square"></i>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+  <!-- jQuery -->
+  <script src="static/js/jquery-3.2.1.min.js"></script>
+  <script src="static/js/jquery-migrate-3.0.0.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="static/plugin/bootstrap/js/popper.min.js"></script>
+  <script src="static/plugin/bootstrap/js/bootstrap.min.js"></script>
+  <script src="static/plugin/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="static/plugin/typeit-master/typeit.min.js"></script>
+  <script src="static/plugin/isotope/isotope.pkgd.min.js"></script>
+  <script src="static/plugin/magnific/jquery.magnific-popup.min.js"></script>
+
+  <!--
+  <script src="static/plugin/particles/particles.min.js"></script>
+  <script src="static/plugin/particles/particles-app.js"></script>
+  -->
+  <!-- custom -->
+  <script src="static/js/custom.js"></script>
+  <script src="static/js/table.js"></script>
+</body>
+<!-- Body End -->
 </html>
