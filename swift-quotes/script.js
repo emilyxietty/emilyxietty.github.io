@@ -212,7 +212,7 @@ function displayQuote(){
    
     //display the quote of that index
     let div=document.querySelector('#quote');
-    let quote=`<div class="card"><p>${quotes[index]}</p></div>`;
+    let quote=`<div class="card"><p>"${quotes[index]}"</p></div>`;
     div.innerHTML=quote;
 }
     displayQuote();
