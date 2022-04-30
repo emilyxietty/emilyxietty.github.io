@@ -31,7 +31,7 @@ let quotes=[
     ' And don\'t lose the way that you dance around in your pj\'s getting ready for school.',
     'this night is sparkling, don\'t you let it go. I\'m wonderstruck, blushing all the way home.',
     '2AM, who do you love?',
-    'Your string of lights is still bright to me… Who you are is not where you\'ve been.',     
+    'Your string of lights is still bright to me… Who you are is not where you\'ve been.',
     'today is never too late to be brand new.',
     'You and I walk a fragile line; I have known it all this time. But I never thought I\'d live to see it break.',
     'I don\'t know how to be something you miss.',
@@ -206,13 +206,13 @@ let quotes=[
 // btn.addEventListener('click', displayQuote);
 
 function displayQuote(){
-    //create an index of a random number 
+    //create an index of a random number
     //convert it into between 0 to length of quotes[]
     let index=Math.floor(Math.random()*quotes.length);
-   
+
     //display the quote of that index
     let div=document.querySelector('#quote');
-    let quote=`<div class="card"><p>"${quotes[index]}"</p></div>`;
+    let quote=`<p>"${quotes[index]}"</p>`;
     div.innerHTML=quote;
 }
     displayQuote();
