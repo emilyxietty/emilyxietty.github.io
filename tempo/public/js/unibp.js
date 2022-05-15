@@ -75,6 +75,7 @@ function resetTimer(){
   difference = 0;
   paused = 0;
   running = 0;
+  document.getElementById("playpauseicon").src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/play-icon-18-256.png";
   timerDisplay.innerHTML = '00:00';
   // timerDisplay.style.background = "transparent";
   // timerDisplay.style.color = "white";
