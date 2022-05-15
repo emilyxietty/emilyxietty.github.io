@@ -121,15 +121,34 @@ box-shadow: inset 5px 5px 15px #4b5281,
 /* .minusTen{
 	color:white;
 } */
-.backbtn {
+#backbtn {
 	width: 4rem;
 	height:4rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 25%;
-	background: #5e66a1;
-
+	/* background: #5e66a1; */
+	/* margin:0.8rem;
+	border-radius: 10px; */
+	background: linear-gradient(145deg, #555c91, #656dac);
+	box-shadow:  5px 5px 15px #52598c,
+	             -5px -5px 15px #6a73b6;
+	/* box-shadow: inset 3px 2px 5px 0 rgba(255, 255, 255, .5), rgba(104, 139, 255, 0.1) 7px 3px 10px, rgba(0, 0, 0, 0.1) 7px 5px 10px; */
+}
+#backbtn2 {
+	width: 4rem;
+	height:4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 25%;
+	/* background: #5e66a1; */
+	/* margin:0.8rem;
+	border-radius: 10px; */
+	background: linear-gradient(145deg, #555c91, #656dac);
+	box-shadow:  5px 5px 15px #52598c,
+	             -5px -5px 15px #6a73b6;
 	/* box-shadow: inset 3px 2px 5px 0 rgba(255, 255, 255, .5), rgba(104, 139, 255, 0.1) 7px 3px 10px, rgba(0, 0, 0, 0.1) 7px 5px 10px; */
 }
 

@@ -95,6 +95,12 @@ function resetTimer(){
   document.getElementById("addTen").style.background="linear-gradient(145deg, #555c91, #656dac)";
   document.getElementById("addTen").style.boxShadow="5px 5px 10px #505789,-5px -5px 10px #6c75b9";
 
+
+    document.getElementById("backbtn").style.background="linear-gradient(145deg, #555c91, #656dac)";
+    document.getElementById("backbtn").style.boxShadow="5px 5px 10px #505789,-5px -5px 10px #6c75b9";
+    document.getElementById("backbtn2").style.background="linear-gradient(145deg, #555c91, #656dac)";
+    document.getElementById("backbtn2").style.boxShadow="5px 5px 10px #505789,-5px -5px 10px #6c75b9";
+
   // timerDisplay.style.background = "transparent";
   // timerDisplay.style.color = "white";
   // timerDisplay.style.cursor = "pointer";
@@ -178,6 +184,12 @@ if (60000>difference){
     document.getElementById("addTen").style.boxShadow="5px 5px 10px #4c94c1,-5px -5px 10px #509ac9";
 
 
+        document.getElementById("backbtn").style.background="linear-gradient(145deg, #4e97c5, #5db4ea)";
+        document.getElementById("backbtn").style.boxShadow="5px 5px 10px #4c94c1,-5px -5px 10px #509ac9";
+        document.getElementById("backbtn2").style.background="linear-gradient(145deg, #4e97c5, #5db4ea)";
+        document.getElementById("backbtn2").style.boxShadow="5px 5px 10px #4c94c1,-5px -5px 10px #509ac9";
+
+
 	}
   else if (360000>difference){
     timerDisplay.style.color = "white";
@@ -198,6 +210,12 @@ if (60000>difference){
     document.getElementById("addTen").style.background="linear-gradient(145deg, #4cb595, #5ad7b2)";
     document.getElementById("addTen").style.boxShadow="5px 5px 5px #4ab192,-5px -5px 5px #4eb998";
 
+        document.getElementById("backbtn").style.background="linear-gradient(145deg, #4cb595, #5ad7b2)";
+        document.getElementById("backbtn").style.boxShadow="5px 5px 5px #4ab192,-5px -5px 5px #4eb998";
+        document.getElementById("backbtn2").style.background="linear-gradient(145deg, #4cb595, #5ad7b2)";
+        document.getElementById("backbtn2").style.boxShadow="5px 5px 5px #4ab192,-5px -5px 5px #4eb998";
+
+
 	}
   else if (420000>difference){
     timerDisplay.style.color = "white";
@@ -215,6 +233,11 @@ if (60000>difference){
     document.getElementById("resetTimer").style.boxShadow="5px 5px 10px #4c94c1,-5px -5px 10px #509ac9";
     document.getElementById("addTen").style.background="linear-gradient(145deg, #4e97c5, #5db4ea)";
     document.getElementById("addTen").style.boxShadow="5px 5px 10px #4c94c1,-5px -5px 10px #509ac9";
+    document.getElementById("backbtn").style.background="linear-gradient(145deg, #4e97c5, #5db4ea)";
+    document.getElementById("backbtn").style.boxShadow="5px 5px 10px #4c94c1,-5px -5px 10px #509ac9";
+    document.getElementById("backbtn2").style.background="linear-gradient(145deg, #4e97c5, #5db4ea)";
+    document.getElementById("backbtn2").style.boxShadow="5px 5px 10px #4c94c1,-5px -5px 10px #509ac9";
+
 	}
 	else if (435000>difference){
     timerDisplay.style.color = "white";
@@ -233,6 +256,11 @@ if (60000>difference){
     document.getElementById("addTen").style.background="linear-gradient(145deg, #c1464a, #a23b3e)";
     document.getElementById("addTen").style.boxShadow="5px 5px 10px #cc474a,-5px -5px 10px #d4494e";
 
+        document.getElementById("backbtn").style.background="linear-gradient(145deg, #c1464a, #a23b3e)";
+        document.getElementById("backbtn").style.boxShadow="5px 5px 10px #cc474a,-5px -5px 10px #d4494e";
+        document.getElementById("backbtn2").style.background="linear-gradient(145deg, #c1464a, #a23b3e)";
+        document.getElementById("backbtn2").style.boxShadow="5px 5px 10px #cc474a,-5px -5px 10px #d4494e";
+
 	}
 	else if (difference>435000){
 		document.body.style.background = "#2d3436";
@@ -249,6 +277,12 @@ if (60000>difference){
     document.getElementById("resetTimer").style.boxShadow="5px 5px 10px #262c2e,-5px -5px 10px #343c3e";
     document.getElementById("addTen").style.background="linear-gradient(145deg, #292f31, #30383a)";
     document.getElementById("addTen").style.boxShadow="5px 5px 10px #262c2e,-5px -5px 10px #343c3e";
+
+    document.getElementById("backbtn").style.background="linear-gradient(145deg, #292f31, #30383a)";
+    document.getElementById("backbtn").style.boxShadow="5px 5px 10px #262c2e,-5px -5px 10px #343c3e";
+    document.getElementById("backbtn2").style.background="linear-gradient(145deg, #292f31, #30383a)";
+    document.getElementById("backbtn2").style.boxShadow="5px 5px 10px #262c2e,-5px -5px 10px #343c3e";
+
 	}
 
   var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
