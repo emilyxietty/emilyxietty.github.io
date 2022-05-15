@@ -18,6 +18,17 @@ body{
 /* .btn-outline-light{
 	background-color:"black";
 } */
+@media (min-width: 320px) and (max-width: 999px) {
+
+  // Mobile and tablet CSS
+
+}
+
+@media (min-width: 1000px) {
+
+  // Laptop/desktop CSS
+
+}
 #btnhome{
 	color:white;
 	/* border-radius: 8px;
