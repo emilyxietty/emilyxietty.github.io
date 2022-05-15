@@ -1,0 +1,108 @@
+body{
+	/* background: rgb(243,211,249);
+	background: radial-gradient(circle, rgba(243,211,249,1) 0%, rgba(31,23,158,0.8786108193277311) 100%); */
+	font-family:"open sans";
+	/* align-content:center; */
+	text-align:center;
+
+	padding-top: 10%;
+	padding-bottom:10%;
+	/* background: #5e66a1; */
+	background-image:url("../img/background.jpg");
+	margin:2%;
+	/* align-content:left; */
+	/* background-color:#3F4649; */
+  /* color: white; */
+/* } */
+}
+/* .btn-outline-light{
+	background-color:"black";
+} */
+#btnhome{
+	color:white;
+	/* border-radius: 8px;
+	background: linear-gradient(145deg, #656dac, #555c91);
+	box-shadow:  9px 9px 18px #454a76,
+	             -9px -9px 18px #7782cc;*/
+	padding:1rem;
+	width:27rem;
+	border-radius: 8px;
+	background: #5e66a1;
+	/* box-shadow: inset 9px 9px 18px #a6abb5,
+	            inset -9px -9px 18px #e6edf9; */
+}
+/* .timer{
+	text-align:center;
+	padding-left: 20px;
+	padding-right:20px;
+	padding-top: 10%;
+	padding-bottom:10%;
+	vertical-align:center;
+} */
+/* .circle{
+	position: absolute;
+	width: 272px;
+	height: 272px;
+	left: 51px;
+	top: 99px;
+
+	background: linear-gradient(140.55deg, rgba(216, 235, 255, 0.2) 1.7%, rgba(255, 234, 253, 0.199136) 44%, rgba(254, 255, 218, 0.1979) 103.46%);
+	box-shadow: -9px -9px 16px rgba(255, 255, 255, 0.6);
+	border-radius: 30px;
+} */
+h1{
+	color:#5e66a1;
+	font-size:3em;
+	font-weight:900;
+}
+h2{
+	font-size:1.2em;
+	font-weight:900;
+	color:#666;
+	margin:auto;
+}
+h3{
+	font-size:1em;
+	color: #dfe6e9;
+}
+#infotext{
+	padding:20px;
+	/* margin-left:20%;
+	margin-right:20%; */
+	margin:auto;
+	width:20rem;
+	margin-top:20px;
+	color:white;
+	border-radius: 15px;
+	/* background: #d0e1eb; */
+}
+#backbtn{
+	border-radius: 8px;
+	color: white;
+	background: #3b3b6d;
+	box-shadow: inset 8px 8px 16px #353561,
+	            inset -8px -8px 16px #414179;
+}
+#infotimer{
+}
+
+.btn-info, .btn-info:active, .btn-info:visited {
+    background-color: #636e72;
+		border-color:#636e72;
+}
+
+.btn-info:hover{
+	background-color: #2d3436;
+	border-color: #2d3436
+}
+#pausebtn{
+	visibility:hidden;
+}
+#timerContainer{
+	margin:auto;
+}
+.timer-text{
+	font-size: 3em;
+	font-weight:800;
+	padding: 30px;
+}
