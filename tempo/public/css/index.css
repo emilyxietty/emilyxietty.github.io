@@ -5,8 +5,8 @@ body{
 	/* align-content:center; */
 	text-align:center;
 
-	padding-top: 10%;
-	padding-bottom:10%;
+	padding-top: 2%;
+	padding-bottom:2%;
 	/* background: #5e66a1; */
 	background-image:url("../img/background.jpg");
 	margin:2%;
@@ -52,11 +52,11 @@ body{
 } */
 h1{
 	color:#5e66a1;
-	font-size:3em;
+	font-size:2em;
 	font-weight:900;
 }
 h2{
-	font-size:1.2em;
+	font-size:1em;
 	font-weight:900;
 	color:#666;
 	margin:auto;
@@ -82,6 +82,11 @@ h3{
 	background: #3b3b6d;
 	box-shadow: inset 8px 8px 16px #353561,
 	            inset -8px -8px 16px #414179;
+}
+#backbtn2{
+	border-radius: 8px;
+	color: white;
+	background: #5e66a1;
 }
 #infotimer{
 }
