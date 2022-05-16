@@ -50,7 +50,7 @@ body {
 #top-menu {
 	/* width: 80%; */
 	display: flex;
-	padding-top: 3%;
+	padding-top: 0%;
 	justify-content: space-between;
 	align-items: center;
 	align-content:center;
