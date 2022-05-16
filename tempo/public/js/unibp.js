@@ -17,15 +17,6 @@ function startTimer(){
     paused = 0;
     running = 1;
     document.getElementById("playpauseicon").src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/pause-icon-18-256.png";
-    // background: #5e66a1;
-    // document.getElementById("pauseTimer").style.boxShadow="inset 6px 6px 12px #4c5382,inset -6px -6px 12px #7079c0";
-    // timerDisplay.style.background = "transparent";
-    // timerDisplay.style.cursor = "auto";
-    // timerDisplay.style.color = "white";
-    // startTimerButton.classList.add('lighter');
-    // pauseTimerButton.classList.remove('lighter');
-    // startTimerButton.style.cursor = "auto";
-    // pauseTimerButton.style.cursor = "pointer";
 
   }
 }
@@ -38,17 +29,8 @@ function pauseTimer(){
     document.getElementById("playpauseicon").src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/pause-icon-18-256.png";
     timerDisplay.style.color = "white";
 
-    // timerDisplay.style.background = "transparent";
-    // timerDisplay.style.cursor = "auto";
-    // timerDisplay.style.color = "white";
-    // startTimerButton.classList.add('lighter');
-    // pauseTimerButton.classList.remove('lighter');
-    // startTimerButton.style.cursor = "auto";
-    // pauseTimerButton.style.cursor = "pointer";
   }
-  // if (!difference){
-  //   // if timer never started, don't allow pause button to do anything
-  // } else
+
   else if (!paused) {
     clearInterval(tInterval);
     savedTime = difference;
@@ -56,15 +38,6 @@ function pauseTimer(){
     running = 0;
     document.getElementById("playpauseicon").src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/play-icon-18-256.png";
     timerDisplay.style.color = "#444";
-
-    // timerDisplay.style.background = "transparent";
-    // timerDisplay.style.color = "#444";
-    // timerDisplay.style.cursor = "pointer";
-    // startTimerButton.classList.remove('lighter');
-    // pauseTimerButton.classList.add('lighter');
-    // startTimerButton.style.cursor = "pointer";
-    // pauseTimerButton.style.cursor = "auto";
-
 
   } else {
     startTimer();
@@ -87,7 +60,6 @@ function resetTimer(){
   document.getElementById("circle").style.boxShadow="inset 20px 20px 60px #505789,inset -20px -20px 60px #6c75b9";
 
   document.getElementById("bar").style.boxShadow="inset 5px 5px 15px #4b5281,inset -5px -5px 15px #717ac1";
-  // document.getElementById("changebar").style.boxShadow="inset 12px 12px 24px #4a8fba,inset -12px -12px 24px #64c1fc";
   document.getElementById("minusTen").style.background="linear-gradient(145deg, #555c91, #656dac)";
   document.getElementById("minusTen").style.boxShadow="5px 5px 10px #505789,-5px -5px 10px #6c75b9";
   document.getElementById("resetTimer").style.background="linear-gradient(145deg, #555c91, #656dac)";
@@ -95,40 +67,22 @@ function resetTimer(){
   document.getElementById("addTen").style.background="linear-gradient(145deg, #555c91, #656dac)";
   document.getElementById("addTen").style.boxShadow="5px 5px 10px #505789,-5px -5px 10px #6c75b9";
 
+  document.getElementById("backbtn").style.background="linear-gradient(145deg, #555c91, #656dac)";
+  document.getElementById("backbtn").style.boxShadow="5px 5px 10px #505789,-5px -5px 10px #6c75b9";
+  document.getElementById("backbtn2").style.background="linear-gradient(145deg, #555c91, #656dac)";
+  document.getElementById("backbtn2").style.boxShadow="5px 5px 10px #505789,-5px -5px 10px #6c75b9";
 
-    document.getElementById("backbtn").style.background="linear-gradient(145deg, #555c91, #656dac)";
-    document.getElementById("backbtn").style.boxShadow="5px 5px 10px #505789,-5px -5px 10px #6c75b9";
-    document.getElementById("backbtn2").style.background="linear-gradient(145deg, #555c91, #656dac)";
-    document.getElementById("backbtn2").style.boxShadow="5px 5px 10px #505789,-5px -5px 10px #6c75b9";
-
-  // timerDisplay.style.background = "transparent";
-  // timerDisplay.style.color = "white";
-  // timerDisplay.style.cursor = "pointer";
   startTimerButton.classList.remove('lighter');
   pauseTimerButton.classList.remove('lighter');
-  // startTimerButton.style.cursor = "pointer";
-  // pauseTimerButton.style.cursor = "auto";
 
 }
 function addTen(){
   if(!running){
-    // updatedTime = new Date().getTime()+10000;
-
     savedTime = savedTime+10000;
     pauseTimer();
-    // tInterval = setInterval(getShowTime, 1);
   }
-  // if (!difference){
-  //   startTime = startTime-10000;
-  //   tInterval = setInterval(getShowTime, 1);
-  //
-  //   startTimer();
-  // }
    else if (!paused) {
-    // addedTime = addedTime+10000;
     startTime = startTime-10000;
-
-  //   updatedTime = new Date().getTime()+10000;
     startTimer();
   }
 }
@@ -138,20 +92,11 @@ function minusTen(){
     resetTimer();
   }
   if(!running){
-    // updatedTime = new Date().getTime()+10000;
-
     savedTime = savedTime-10000;
     pauseTimer();
-    // tInterval = setInterval(getShowTime, 1);
   }
-  // if (!difference){
-  //
-  // }
    else if (!paused) {
-    // addedTime = addedTime+10000;
     startTime = startTime+10000;
-
-  //   updatedTime = new Date().getTime()+10000;
     startTimer();
   }
 }
@@ -201,8 +146,6 @@ if (60000>difference){
     document.getElementById("circle").style.boxShadow="inset 12px 12px 24px #33836b,inset -12px -12px 24px #45b191";
 
     document.getElementById("bar").style.boxShadow="inset 12px 12px 24px #33836b,inset -12px -12px 24px #45b191";
-    // document.getElementById("changebar").style.boxShadow="20px 20px 60px #47ab8d,-20px -20px 60px #61e7bf";
-    // document.getElementById("changebar").style.background="linear-gradient(145deg, #4cb595, #5ad7b2)";
     document.getElementById("minusTen").style.background="linear-gradient(145deg, #4cb595, #5ad7b2)";
     document.getElementById("minusTen").style.boxShadow="5px 5px 5px #4ab192,-5px -5px 5px #4eb998";
     document.getElementById("resetTimer").style.background="linear-gradient(145deg, #4cb595, #5ad7b2)";
