@@ -9,6 +9,7 @@ var tInterval;
 var savedTime;
 var paused = 0;
 var running = 0;
+var tickAudio = new Audio('http://soundjax.com/reddo/56895%5EDING.mp3');
 
 function startTimer(){
   if(!running){
@@ -100,6 +101,66 @@ function minusTen(){
     startTimer();
   }
 }
+
+
+var protimeend = 1;
+var protimestart = 1;
+var gracestart = 2;
+var graceend = 3;
+var dings = 0;
+
+function getSound() {
+	// tickAudio.play();
+	if (difference <= 60000) {
+		protimeend = 1;
+	}
+	if (difference >= 60000) {
+		if (protimeend > 0) {
+			tickAudio.play();
+			protimeend = protimeend - 1;
+		}
+		if (difference <= 360000) {
+			protimestart = 1;
+		}
+	}
+	if (difference >= 360000) {
+		if (protimestart > 0) {
+			tickAudio.play();
+			protimestart = protimestart - 1;
+		}
+		if (difference <= 421000) {
+			gracestart = 2;
+		}
+	}
+	if (difference >= 420000) {
+		if (gracestart > 1) {
+			tickAudio.play();
+			gracestart = gracestart - 1;
+		}
+	}
+	if (difference >= 421000) {
+		if (gracestart > 0) {
+			tickAudio.play();
+			gracestart = gracestart - 1;
+		}
+		if (difference <= 437000) {
+			graceend = 3;
+		}
+	}
+	if (difference >= 435000 && graceend > 2) {
+		tickAudio.play();
+		graceend = graceend - 1;
+	}
+	if (difference >= 436000 && graceend > 1) {
+		tickAudio.play();
+		graceend = graceend - 1;
+	}
+	if (difference >= 437000 && graceend > 0) {
+		tickAudio.play();
+		graceend = graceend - 1;
+	}
+}
+
 
 function getShowTime(){
   updatedTime = new Date().getTime();
@@ -234,4 +295,7 @@ if (60000>difference){
   minutes = (minutes < 10) ? "0" + minutes : minutes;
   seconds = (seconds < 10) ? "0" + seconds : seconds;
   timerDisplay.innerHTML = minutes + ':' + seconds;
+
+  getSound();
+
 }
