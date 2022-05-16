@@ -1,16 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 
+html{
+	min-height: 100%;
+	background-image: url("../../public/img/backgrounds2.jpg");
+
+	/* background-repeat: no-repeat;
+	background-size: auto  100% ;
+	background-position: center; */
+	/* background-position: center; */
+background-repeat: no-repeat;
+background-size: cover;
+}
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 	padding-top: 3%;
 	padding-bottom: 3%;
+	min-height:100%;
+background:transparent;
+	/* height:100% */
 	/* background: #5e66a1; */
-	background-image: url("../../public/img/backgrounds2.jpg");
-	background-size: cover;
-position:fixed;
-	width:100%;
+
+	/* background-size: cover 100%; */
+	/* background-size: contain;
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+	/* background-size: 100% 100%; */
+/* position:fixed; */
+	/* width:100%; */
 	padding-left:15%;
 	padding-right:15%;
 }
