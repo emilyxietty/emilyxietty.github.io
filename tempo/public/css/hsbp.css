@@ -10,6 +10,10 @@ body {
 	padding-left: 15%;
 	padding-right: 15%;
 }
+.collapse{
+	background: #5e66a1;
+	border-radius:25px;
+}
 
 .speaker {
 	margin-left: 25%;
@@ -102,6 +106,7 @@ h4{
 #backbtn {
 	width: 3rem;
 	height: 3rem;
+	margin-left:1rem;
 	align-items: center;
 	justify-content: center;
 	border-radius: 25%;
@@ -113,12 +118,15 @@ h4{
 #backbtn2 {
 	width: 3rem;
 	height: 3rem;
+	margin-left:1rem;
+
 	align-items: center;
 	justify-content: center;
 	border-radius: 25%;
 	background: linear-gradient(145deg, #555c91, #656dac);
 	box-shadow: 5px 5px 15px #52598c,
 		-5px -5px 15px #6a73b6;
+
 }
 #pausebtn {
 	visibility: hidden;
@@ -218,6 +226,28 @@ h4{
 	#circle {
 		width: 14rem;
 		height: 14rem;
+	}
+
+	.changebar {
+		margin: 0.2rem;
+	}
+}
+
+@media only screen and (max-width: 250px) {
+	body {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+
+	#bar {
+		width: 80%;
+	}
+
+	#circle {
+		/* width: calc(90%-2rem); */
+		/* height: width; */
+		width:calc(90%);
+		height:auto;
 	}
 
 	.changebar {
