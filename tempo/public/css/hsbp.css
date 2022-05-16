@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 	padding-top: 3%;
 	padding-bottom: 2%;
 	background: #5e66a1;
-	width:100%;
-	padding-left:15%;
-	padding-right:15%;
+	width: 100%;
+	padding-left: 15%;
+	padding-right: 15%;
 }
 
 .speaker {
@@ -17,8 +16,8 @@ body {
 	margin-right: 20%; */
 	/* margin:auto; */
 	/* width:60%; */
-	margin-left:25%;
-	margin-right:25%;
+	margin-left: 25%;
+	margin-right: 25%;
 	border-radius: 50px;
 	background: linear-gradient(145deg, #555c91, #656dac);
 	box-shadow: 20px 20px 60px #505789,
@@ -31,11 +30,11 @@ body {
 	/* margin: auto; */
 }
 
-.backbtn:hover {
+/* .backbtn:hover {
 	box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2) !important;
 	background-color: #3e4b77 !important;
 	color: #fff !important;
-}
+} */
 
 .btn-outline-light {
 	background-color: "black";
@@ -54,6 +53,9 @@ body {
 	padding-top: 3%;
 	justify-content: space-between;
 	align-items: center;
+	align-content:center;
+	padding-left:3%;
+	padding-right:3%;
 	/* margin-left:20%;
 	margin-right:20%; */
 	text-transform: uppercase;
@@ -66,12 +68,11 @@ body {
 #circle {
 	width: 20rem;
 	height: 20rem;
-
 	/* height: 20rem; */
-	margin-top:5%;
-	margin-bottom:5%;
-	margin-left:2%;
-	margin-right:2%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 2%;
+	margin-right: 2%;
 	/* width:90%;
 	max-height:90%; */
 	/* margin-top: 2rem;
@@ -121,8 +122,8 @@ h3 {
 #bar {
 	/* margin-left: 23%;
 	margin-right: 23%; */
-	width:50%;
-	margin:auto;
+	width: 50%;
+	margin: auto;
 	border-radius: 18px;
 	/* padding:2%; */
 	/* background: linear-gradient(145deg, #656dac, #555c91); */
@@ -131,6 +132,9 @@ h3 {
 	/* background: #5e66a1; */
 	box-shadow: inset 5px 5px 15px #4b5281,
 		inset -5px -5px 15px #717ac1;
+}
+.row{
+	width:100%;
 }
 
 .changebar {
@@ -150,8 +154,8 @@ h3 {
 	color:white;
 } */
 #backbtn {
-	width: 4rem;
-	height: 4rem;
+	width: 3rem;
+	height: 3rem;
 	/* display: flex; */
 	align-items: center;
 	justify-content: center;
@@ -166,9 +170,9 @@ h3 {
 }
 
 #backbtn2 {
-	width: 4rem;
-	height: 4rem;
-	/* display: flex; */
+	width: 3rem;
+	height: 3rem;
+	/* display: inline-flex; */
 	align-items: center;
 	justify-content: center;
 	border-radius: 25%;
@@ -204,36 +208,37 @@ h3 {
 }
 
 @media only screen and (max-width: 1300px) {
-	body{
-		padding-left:5%;
-		padding-right:5%;
+	body {
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 
 	.speaker {
-		margin-left:15%;
-		margin-right:15%;
+		margin-left: 15%;
+		margin-right: 15%;
 		border-radius: 50px;
 		background: linear-gradient(145deg, #555c91, #656dac);
 		box-shadow: 20px 20px 60px #505789,
 			-20px -20px 60px #6c75b9;
 		padding-top: 3rem;
 		padding-bottom: 3rem;
-
 	}
-	#circle{
-	margin-top:2%;
-	margin-bottom:2%;
-}
+
+	#circle {
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
 }
 
 @media only screen and (max-width: 900px) {
-	body{
-		padding-left:5%;
-		padding-right:5%;
+	body {
+		padding-left: 5%;
+		padding-right: 5%;
 	}
+
 	.speaker {
-		margin-left:2%;
-		margin-right:2%;
+		margin-left: 2%;
+		margin-right: 2%;
 		border-radius: 50px;
 		background: linear-gradient(145deg, #555c91, #656dac);
 		box-shadow: 20px 20px 60px #505789,
@@ -241,47 +246,65 @@ h3 {
 		padding-top: 3rem;
 		padding-bottom: 3rem;
 	}
+
 	#top-menu {
 		margin-bottom: 0;
 	}
-	#circle{
-	margin-top:2%;
-	margin-bottom:2%;
+
+	#circle {
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
 }
-}
+
 @media only screen and (max-width: 625px) {
-	body{
-		padding-left:2%;
-		padding-right:2%;
+	body {
+		padding-left: 2%;
+		padding-right: 2%;
 	}
-	#bar {
-		width:80%;
 
+	#bar {
+		width: 80%;
 	}
-	#circle{
-	width:17rem;
-	height:17rem;
-	margin-top:2%;
-	margin-bottom:2%;
+
+	#circle {
+		width: 17rem;
+		height: 17rem;
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
+
+	#playpausebtn {
+		padding: 0rem;
+	}
+	.backbtn{
+		padding-bottom:0.5rem;
+	}
+	.backbtn2 {
+		margin-top:1rem;
+	}
 }
-#playpausebtn {
-	padding: 0rem;
-}
-}
+
 @media only screen and (max-width: 350px) {
-	body{
-		padding-left:2%;
-		padding-right:2%;
+	body {
+		padding-left: 2%;
+		padding-right: 2%;
 	}
-	#bar {
-		width:80%;
 
+	#bar {
+		width: 80%;
 	}
-	#circle{
-	width:14rem;
-	height:14rem;
-}
-.changebar {
-	margin: 0.2rem;
-}
+
+	#circle {
+		width: 14rem;
+		height: 14rem;
+	}
+
+	.changebar {
+		margin: 0.2rem;
+	}
+	#top-menu {
+		font-size: 0rem;
+		letter-spacing: .1rem;
+	}
 }
