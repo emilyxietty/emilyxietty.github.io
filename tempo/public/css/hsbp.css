@@ -205,8 +205,8 @@ h3 {
 
 @media only screen and (max-width: 1300px) {
 	body{
-		padding-left:10%;
-		padding-right:10%;
+		padding-left:5%;
+		padding-right:5%;
 	}
 
 	.speaker {
@@ -220,12 +220,16 @@ h3 {
 		padding-bottom: 3rem;
 
 	}
+	#circle{
+	margin-top:2%;
+	margin-bottom:2%;
+}
 }
 
 @media only screen and (max-width: 900px) {
 	body{
-		padding-left:10%;
-		padding-right:10%;
+		padding-left:5%;
+		padding-right:5%;
 	}
 	.speaker {
 		margin-left:2%;
@@ -236,13 +240,19 @@ h3 {
 			-20px -20px 60px #6c75b9;
 		padding-top: 3rem;
 		padding-bottom: 3rem;
-
 	}
+	#top-menu {
+		margin-bottom: 0;
+	}
+	#circle{
+	margin-top:2%;
+	margin-bottom:2%;
+}
 }
 @media only screen and (max-width: 625px) {
 	body{
-		padding-left:5%;
-		padding-right:5%;
+		padding-left:2%;
+		padding-right:2%;
 	}
 	#bar {
 		width:80%;
@@ -251,12 +261,17 @@ h3 {
 	#circle{
 	width:17rem;
 	height:17rem;
+	margin-top:2%;
+	margin-bottom:2%;
+}
+#playpausebtn {
+	padding: 0rem;
 }
 }
 @media only screen and (max-width: 350px) {
 	body{
-		padding-left:5%;
-		padding-right:5%;
+		padding-left:2%;
+		padding-right:2%;
 	}
 	#bar {
 		width:80%;
