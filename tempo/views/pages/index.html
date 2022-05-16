@@ -16,6 +16,29 @@
 type = "image/x-icon">
   </head>
   <body>
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="p-4">
+          <div class="title">Important Links</div>
+          <a href="http://www.torontodebateacademy.com/" target="_blank">
+          <button type="button" class="btn changebar">About Toronto Debate Academy (TDA)</button>
+        </a>
+        <a href="http://www.torontodebateacademy.com/resources/" target="_blank">
+          <button type="button" class="btn changebar">TDA resources on BP debate</button>
+        </a>
+        <br><br>
+          <h4 class="text-white">this web app is made by Emily Xie for educational purposes.</h4>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span><span/>
+          <a href="https://www.buymeacoffee.com/emilyxietty" target="_blank">
+            <button type="button" id="backbtn2" class="backbtn2 btn"><img src="https://www.pinclipart.com/picdir/big/133-1336169_thank-you-for-registering-expect-to-hear-from.png" style="width:1rem"/></button>
+          </a>
+        </button>
+      </nav>
+    </div>
     <div class="timer">
       <img src="https://ouch-cdn2.icons8.com/Kvs2RMHmylKzr-na4-icRDOjsFiw6t1EyRBZg568oSA/rs:fit:912:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTQ0/LzNiYmRjNGJmLWY4/YjctNDNmOS1hMmE3/LTViMmEyOTIxZmU5/Ny5wbmc.png" style="width:5rem";/>
       <h1>debate timer</h1>
@@ -28,32 +51,8 @@ type = "image/x-icon">
             <button type="button" class="btn" id="btnhome">University British Parliamentary (7 mins)</button>
           </a>
           </div>
-    <button type="button" id="backbtn2"class="btn" data-toggle="modal" data-target="#exampleModal">
-      <img src="https://icon-library.com/images/information-icon-white/information-icon-white-6.jpg" style="width:1rem;"/>
-    </button>
-    <a href="https://www.buymeacoffee.com/emilyxietty" target="_blank">
-      <button type="button" id="backbtn2" class="btn"><img src="https://www.pinclipart.com/picdir/big/133-1336169_thank-you-for-registering-expect-to-hear-from.png" style="width:1rem"/></button>
-    </a>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Basic Information</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Refresh timer for new speech at top. Color-changing timer to mark different time milestones in debate speeches. Created by Emily Xie.
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <script src="../../public/index.js"></script>
     <script src="../../public/circle.js"></script>

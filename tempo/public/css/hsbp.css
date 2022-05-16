@@ -159,6 +159,7 @@ h4{
 		background: linear-gradient(145deg, #555c91, #656dac);
 		box-shadow: 20px 20px 60px #505789,
 			-20px -20px 60px #6c75b9;
+			padding-bottom:1rem;
 	}
 
 	#circle {

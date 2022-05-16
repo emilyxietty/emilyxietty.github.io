@@ -4,8 +4,8 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
-	padding-top: 8%;
-	padding-bottom: 8%;
+	padding-top: 3%;
+	padding-bottom: 3%;
 	background: #5e66a1;
 	width:100%;
 	padding-left:15%;
@@ -85,7 +85,35 @@ h3 {
 .btn-secondary {
 	background: #5e66a1;
 }
-
+.collapse{
+	background: #5e66a1;
+	border-radius:25px;
+}
+.title{
+	padding-bottom: 1rem;
+	padding-top:2rem;
+	font-weight:900;
+	color:#DDD;
+	letter-spacing: .05rem;
+	text-transform:uppercase;
+}
+.navbar{
+	justify-content:flex-start;
+}
+.changebar {
+	height: 3rem;
+	border-radius: 25%;
+	color: white;
+	margin: 0.8rem;
+	border-radius: 10px;
+	background: linear-gradient(145deg, #555c91, #656dac);
+	box-shadow: 5px 5px 15px #52598c,
+		-5px -5px 15px #6a73b6;
+}
+h4{
+	font-size:0.8rem;
+	color: #EEE;
+}
 @media only screen and (max-width: 1300px) {
 	body{
 		padding-left:5%;

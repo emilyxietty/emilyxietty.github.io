@@ -9,6 +9,12 @@ var savedTime;
 var paused = 0;
 var running = 0;
 
+
+
+// var audio = new Audio("https://dl.dropboxusercontent.com/s/1cdwpm3gca9mlo0/kick.mp3");
+
+var tickAudio = new Audio('http://soundjax.com/reddo/56895%5EDING.mp3');
+
 function startTimer() {
 	if (!running) {
 		startTime = new Date().getTime();
@@ -41,6 +47,20 @@ function pauseTimer() {
 
 }
 
+// window.addEventListener("keypress", function (evt) {
+//     var SPACEBAR = 32;
+//     if (evt.which === SPACEBAR) {
+//         pauseTimer();
+//         // evt.preventDefault();
+//     }
+// });
+
+// document.body.onkeyup = function(e){
+//     if(e.keyCode == 32){
+//       pauseTimer();
+//     }
+// }
+
 function resetTimer() {
 	clearInterval(tInterval);
 	savedTime = 0;
@@ -48,6 +68,7 @@ function resetTimer() {
 	paused = 0;
 	running = 0;
 	document.getElementById("playpauseicon").src = "https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/play-icon-18-256.png";
+	timerDisplay.style.color = "white";
 
 	timerDisplay.innerHTML = '00:00';
 	document.body.style.background = "#5e66a1";
@@ -91,13 +112,68 @@ function minusTen() {
 		resetTimer();
 	}
 	if (!running) {
-
 		savedTime = savedTime - 10000;
 		pauseTimer();
 	} else if (!paused) {
 		startTime = startTime + 10000;
-
 		startTimer();
+	}
+}
+var protimeend = 1;
+var protimestart = 1;
+var gracestart = 2;
+var graceend = 3;
+var dings = 0;
+
+function getSound() {
+	// tickAudio.play();
+	if (difference <= 30000) {
+		protimeend = 1;
+	}
+	if (difference >= 30000) {
+		if (protimeend > 0) {
+			tickAudio.play();
+			protimeend = protimeend - 1;
+		}
+		if (difference <= 270000) {
+			protimestart = 1;
+		}
+	}
+	if (difference >= 270000) {
+		if (protimestart > 0) {
+			tickAudio.play();
+			protimestart = protimestart - 1;
+		}
+		if (difference <= 300000) {
+			gracestart = 2;
+		}
+	}
+	if (difference >= 300000) {
+		if (gracestart > 1) {
+			tickAudio.play();
+			gracestart = gracestart - 1;
+		}
+	}
+	if (difference >= 301000) {
+		if (gracestart > 0) {
+			tickAudio.play();
+			gracestart = gracestart - 1;
+		}
+		if (difference <= 315000) {
+			graceend = 3;
+		}
+	}
+	if (difference >= 315000 && graceend > 2) {
+		tickAudio.play();
+		graceend = graceend - 1;
+	}
+	if (difference >= 316000 && graceend > 1) {
+		tickAudio.play();
+		graceend = graceend - 1;
+	}
+	if (difference >= 317000 && graceend > 0) {
+		tickAudio.play();
+		graceend = graceend - 1;
 	}
 }
 
@@ -109,7 +185,6 @@ function getShowTime() {
 		difference = updatedTime - startTime;
 	}
 
-	// high school BP
 	if (30000 > difference) {
 		timerDisplay.style.color = "white";
 
@@ -198,6 +273,7 @@ function getShowTime() {
 		document.getElementById("backbtn2").style.background = "linear-gradient(145deg, #c1464a, #a23b3e)";
 		document.getElementById("backbtn2").style.boxShadow = "5px 5px 10px #cc474a,-5px -5px 10px #d4494e";
 
+
 	} else if (difference > 315000) {
 		document.body.style.background = "#2d3436";
 		timerDisplay.style.color = "#d63031";
@@ -227,4 +303,5 @@ function getShowTime() {
 	minutes = (minutes < 10) ? "0" + minutes : minutes;
 	seconds = (seconds < 10) ? "0" + seconds : seconds;
 	timerDisplay.innerHTML = minutes + ':' + seconds;
+	getSound();
 }
