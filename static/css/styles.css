@@ -64,12 +64,20 @@ body {
 /* .pfp {
   width:30rem;
 } */
+/* .aboutssection {
+  padding:0;
+} */
+.pfp {
+  width:15rem;
+}
 img {
   max-width: 80%;
 }
 .section {
-  padding-top: 90px;
-  padding-bottom: 45px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-top:auto;
+  margin-bottom:auto;
   position: relative;
 }
 @media (max-width: 991px){
@@ -348,6 +356,10 @@ img {
   color: #fafafa;
 }
 
+.project-info {
+  padding-left:10rem;
+padding-right:10rem;
+}
 /*---------------------------------
 * Body
 -----------------------------------*/
@@ -514,6 +526,9 @@ img {
 -----------------------------------*/
 .full-screen {
   min-height: 100vh;
+}
+.part-screen {
+  min-height: 50vh;
 }
 
 .home-banner {
@@ -693,17 +708,17 @@ img {
   position: relative;
  }
  .aboutus-text {
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
   padding-left: 50px;
  }
- .aboutus-text span {
+ /* .aboutus-text span {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
   display: inline-block;
   margin-bottom: 15px;
- }
+ } */
  .aboutus-text h3 {
   font-weight: 600;
   color: #1d242B;
@@ -713,7 +728,7 @@ img {
  .aboutus-text p {
   color: #1d242B;
   font-size: 14px;
-  width: 500px;
+  /* width: 500px; */
   max-width: 100%;
  }
 
@@ -725,6 +740,12 @@ img {
     padding-left: 50px;
     margin: 15px 0;
  }
+ /* .btn-dark {
+   background-color:#0b0b45;
+   outline-color:#0b0b45;
+
+   opacity:80%;
+ } */
  .aboutus-text .counter-col i {
   font-size: 34px;
   position: absolute;
@@ -1004,7 +1025,7 @@ img {
 }
 .resume-box span {
   font-size: 13px;
-  font-style: italic;
+  /* font-style: italic; */
   color: #888;
   letter-spacing: 1px;
   margin-left: 12px;
