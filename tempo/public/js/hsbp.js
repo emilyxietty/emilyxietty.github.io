@@ -13,7 +13,7 @@ var running = 0;
 
 // var audio = new Audio("https://dl.dropboxusercontent.com/s/1cdwpm3gca9mlo0/kick.mp3");
 
-var tickAudio = new Audio('http://soundjax.com/reddo/56895%5EDING.mp3');
+var tickAudio = new Audio('https://soundjax.com/reddo/56895%5EDING.mp3');
 
 function startTimer() {
 	if (!running) {

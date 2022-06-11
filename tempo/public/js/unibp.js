@@ -9,7 +9,7 @@ var tInterval;
 var savedTime;
 var paused = 0;
 var running = 0;
-var tickAudio = new Audio('http://soundjax.com/reddo/56895%5EDING.mp3');
+var tickAudio = new Audio('https://soundjax.com/reddo/56895%5EDING.mp3');
 
 function startTimer(){
   if(!running){
