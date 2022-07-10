@@ -13,10 +13,10 @@ h1{
   text-align:center;
 }
 .overall{
-  padding-left:10em;
-  padding-right:10em;
-  padding-top:2em;
-  padding-bottom:5em;
+  padding-left:5rem;
+  padding-right:5rem;
+  padding-top:2rem;
+  padding-bottom:5rem;
 
   font-size:2em;
   border:none;
