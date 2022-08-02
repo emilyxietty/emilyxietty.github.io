@@ -1,17 +1,62 @@
 @import url('https://fonts.googleapis.com/css?family=open sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
 
+        body p {
+            /* font-style: italic; */
+            font-weight: 300; /* You specify the number you see next to the fonts to change from light to bold ie you would put 700 etc. etc. */
+        }
+p {
+  font-weight: 300;
+}
 #medium{
   margin-top: 20px;
-  color:white;
+  /* color:white; */
 }
 
-.myexp{
+/* .banner {
+	display: block;
+	height: 50vh;
+	background-color: white;
+} */
+.about-banner {
+	display: block;
+	height: 50vh;
+	padding: 8vh;
+	padding-left:15vh;
+	padding-right:15vh;
+	/* background-color: #121212; */
+  background-color: white;
+
+
+}
+.grey1 {
+	display: block;
+  width:100%;
+  padding:auto;
+  margin:auto;
+	padding:2rem;
+	background-color:#333;
+	border-radius:1rem;
+	color:#CCC;
+  height:100%;
+}
+.col-4 {
+  height:30vh;
+}
+.col-8 {
+  height:30vh;
+}
+
+/* .myexp{
   background: #94b3fd;
   text-align: center;
   color: #fafafa;
   padding: 40px;
   font-weight: bold
-}
+} */
 #social , #btns{
 	list-style: none;
   padding-top: 15px;
@@ -57,8 +102,9 @@ body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-size: 14px;
-  line-height: 1.5;
-  color: #1d242B;
+  /* line-height: 1.5; */
+  /* color: #1d242B; */
+  /* background-color: #121212; */
   width:100%;
 }
 /* .pfp {
@@ -68,10 +114,13 @@ body {
   padding:0;
 } */
 .pfp {
+  padding:auto;
+  margin:auto;
   width:15rem;
+  border-radius: 2vh;
 }
 img {
-  max-width: 80%;
+  max-width: 90%;
 }
 .section {
   padding-top: 4rem;
@@ -375,9 +424,9 @@ padding-right:10rem;
 }
 
 @media(max-width: 767px){
-  .header-style .social-icons {
+  /* .header-style .social-icons {
     display: none;
-  }
+  } */
   .header-style {
     width: 100%;
     bottom: auto;
@@ -404,7 +453,7 @@ padding-right:10rem;
     top: 0;
     left: 0;
     width: 80%;
-    height: 65px;
+    /* height: 65px; */
   }
   .header-style .k-navbar-nav {
     margin: 10px 0;
@@ -482,9 +531,9 @@ padding-right:10rem;
 }
 /**/
 
-.header-nav-01 .social-icons a {
+/* .header-nav-01 .social-icons a {
   color: #fafafa;
-}
+} */
 
 .header-nav-01.fixed-header {
   top: 0;
