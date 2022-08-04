@@ -1,0 +1,51 @@
+body {
+	/* background-image: url("./background.jpg"); */
+	/* background-size: auto; */
+	/* width:100vh;
+	background-repeat: no-repeat; */
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	background-color:black;
+	opacity: 100%;
+	padding:5vh;
+	padding-top:10vh;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+.general{
+	text-align: center;
+}
+
+h1{
+	color: white;
+	font-weight:700;
+	font-size: 3vh;
+	padding:1vh;
+}
+
+.btn {
+	font-size: 2vh;
+	padding:1.5vh;
+	margin:2vh;
+	width:38vh;
+}
+
+.generator {
+	color:white;
+	padding:10vh;
+	font-size:3vh;
+	/* background-color:black; */
+}
+
+#anime1 {
+	display:none;
+	font-weight:700;
+}
+
+#anime2 {
+	display:none;
+	font-weight:700;
+}
