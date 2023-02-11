@@ -20,83 +20,84 @@
 </head>
 
 <body>
-  <div class="speaker">
-    <!-- <div class="info">BP: 5:15</div> -->
-    <div class="bar" id="bar">
-      <button type="button" class="changebar reset btn" id="minusTen" onclick="minusTen()"><img src="./pages/rewind.png"
-          style="width:1.4rem;" /></button>
-      <button type="button" class="changebar reset btn" id="resetTimer" onclick="resetTimer()"><img id="reseticon"
-          src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/restart-icon-18-256.png"
-          style="width:1.4rem;" /></button>
-      <button type="button" class="changebar reset btn" id="addTen" onclick="addTen()"><img src="./pages/forward.png"
-          style="width:1.4rem;" /></button>
-    </div>
+    <div class="speaker">
+      <!-- <div class="info">BP: 5:15</div> -->
 
-    <div id="circle">
-      <div id="timerContainer">
-        <button id="timer" class="timer btn timer-text" onclick="startTimer()">00:00</button>
+      <div class="bar" id="bar">
+        <button type="button" class="changebar reset btn" id="minusTen" onclick="minusTen()"><img
+            src="./pages/rewind.png" style="width:1.4rem;" /></button>
+        <button type="button" class="changebar reset btn" id="resetTimer" onclick="resetTimer()"><img id="reseticon"
+            src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/restart-icon-18-256.png"
+            style="width:1.4rem;" /></button>
+        <button type="button" class="changebar reset btn" id="addTen" onclick="addTen()"><img
+            src="./pages/forward.png" style="width:1.4rem;" /></button>
       </div>
+  
+      <div id="circle">
+        <div id="timerContainer">
+          <button id="timer" class="timer btn timer-text" onclick="startTimer()">00:00</button>
+        </div>
+      </div>
+      <br>
+      <button type="button" class="pauseTimer reset btn" id="playpausebtn" onclick="pauseTimer()"><img
+          id="playpauseicon"
+          src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/play-icon-18-256.png"
+          style="width:5rem;" /></button>
+  
+      <br>
+        <br><br>
+      <div id="infotext"></div>
+  
     </div>
-    <br>
-    <button type="button" class="pauseTimer reset btn" id="playpausebtn" onclick="pauseTimer()"><img id="playpauseicon"
-        src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/play-icon-18-256.png"
-        style="width:5rem;" /></button>
-
-    <br>
-    <br><br>
-    <div id="infotext"></div>
-
-  </div>
-  <div class="slider">
-    <div class="nav">
-      <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" onclick="resetTimer()" />
-      <input type="radio" name="slider" title="slide2" class="slider__nav" onclick="resetTimer()" />
-      <input type="radio" name="slider" title="slide3" class="slider__nav" onclick="resetTimer()" />
-      <input type="radio" name="slider" title="slide4" class="slider__nav" onclick="resetTimer()" />
-      <input type="radio" name="slider" title="slide5" class="slider__nav" onclick="resetTimer()" />
-      <input type="radio" name="slider" title="slide6" class="slider__nav" onclick="resetTimer()" />
-      <input type="radio" name="slider" title="slide7" class="slider__nav" onclick="resetTimer()" />
-      <input type="radio" name="slider" title="slide8" class="slider__nav" onclick="resetTimer()" />
-    </div>
-
+    <div class="slider">
+    <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" onclick="resetTimer()"/>
+    <input type="radio" name="slider" title="slide2" class="slider__nav" onclick="resetTimer()"/>
+    <input type="radio" name="slider" title="slide3" class="slider__nav" onclick="resetTimer()"/>
+    <input type="radio" name="slider" title="slide4" class="slider__nav" onclick="resetTimer()"/>
+    <input type="radio" name="slider" title="slide5" class="slider__nav" onclick="resetTimer()"/>
+    <input type="radio" name="slider" title="slide6" class="slider__nav" onclick="resetTimer()"/>
+    <input type="radio" name="slider" title="slide7" class="slider__nav" onclick="resetTimer()"/>
+    <input type="radio" name="slider" title="slide8" class="slider__nav" onclick="resetTimer()"/>
+    
+    
     <div class="slider__inner">
-
-
+      
+  
       <div class="slider__contents">
         <h2>PRIME MINISTER (PM)</h2><br>
       </div>
       <div class="slider__contents">
-
+       
         <h2>LEADER OF OPPOSITION (LO)</h2>
-
+     
       </div>
       <div class="slider__contents">
         <h2>DEPUTY PRIME MINISTER (DPM)</h2>
-
+      
       </div>
       <div class="slider__contents">
         <h2>DEPUTY LEADER OF OPPOSITION (DLO)</h2>
-
+      
       </div>
       <div class="slider__contents">
         <h2>MEMBER OF GOVERNMENT (MG)</h2>
-
+        
       </div>
       <div class="slider__contents">
         <h2>MEMBER OF OPPOSITION (MO)</h2>
-
+        
       </div>
       <div class="slider__contents">
         <h2>GOVERNMENT WHIP (GW)</h2>
-
+        
       </div>
       <div class="slider__contents">
         <h2>OPPOSITION WHIP (OW)</h2>
-
+        
       </div>
     </div>
   </div>
-
+  
   <script src="./js/slides.js"></script>
   <script src="./js/hsbp.js"></script>
 

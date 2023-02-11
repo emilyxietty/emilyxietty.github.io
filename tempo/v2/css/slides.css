@@ -6,7 +6,7 @@
 
 html, body {
   /* padding-top: 2rem; */
-  padding-top: 3%;
+  padding-top: 5%;
   /* padding-bottom: 40%; */
 }
 
@@ -30,6 +30,11 @@ h2 {
   margin-right: auto;
 }
 .slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
   height: 140px;
   /* margin: auto; */
   position: relative;
@@ -46,9 +51,9 @@ h2 {
       -ms-flex-align: center;
           align-items: flex-end;
 -webkit-box-pack: bottom;
-  -webkit-justify-content: bottom;
+  -webkit-justify-content: center;
   -ms-flex-pack: bottom;
-          justify-content: bottom;
+          justify-content: center;
     /* 
       -ms-flex-pack: bottom;
           justify-content: bottom;
@@ -64,7 +69,6 @@ h2 {
           
 }
 .slider__nav {
-  position: relative;
   width: 12px;
   height: 12px;
   margin: 2rem 12px;
