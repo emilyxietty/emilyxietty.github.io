@@ -95,10 +95,10 @@ var graceend = 3;
 var dings = 0;
 
 function getSound() {
-	if (difference <= 30000) {
+	if (difference <= 60000) { //
 		protimeend = 1;
 	}
-	if (difference >= 30000) {
+	if (difference >= 60000) {
 		if (protimeend > 0) {
 			tickAudio.play();
 			protimeend = protimeend - 1;
@@ -153,33 +153,34 @@ function getShowTime() {
 		difference = updatedTime - startTime;
 	}
 
-	if (30000 > difference) { // blue
+	if (60000 > difference) { // blue
 		timerDisplay.style.color = "white";
 
 		document.body.style.background = "#6fa8e4";
 		document.getElementById("infotext").innerHTML = "protected time. POIs may not be offered.";
 		// document.getElementById("speaker").style.background = "linear-gradient(145deg, #4e97c5, #5db4ea)";
-	} else if (270000 > difference) { // green
+	} else if (360000 > difference) { // green
 		timerDisplay.style.color = "white";
 
 		document.body.style.background = "#0aca83";
 		document.getElementById("infotext").innerHTML = "protected time over. POIs may be offered.";
-	} else if (300000 > difference) { // blue
+
+	} else if (420000 > difference) { // blue
 		timerDisplay.style.color = "white";
 
 		document.body.style.background = "#6fa8e4";
 		document.getElementById("infotext").innerHTML = "protected time starts again. POIs may not be offered.";
 
-	} else if (315000 > difference) { // red 5-5:15
+	} else if (435000 > difference) { // red
 		timerDisplay.style.color = "white";
 		document.body.style.background = "#df4d51";
 		document.getElementById("infotext").innerHTML = "15 seconds grace time. speech will end at 5:15.";
 
 
-	} else if (difference > 315000) { // black
+	} else if (difference > 435000) { // black
 		document.body.style.background = "#2d3436";
 		timerDisplay.style.color = "#d63031";
-		document.getElementById("infotext").innerHTML = "time over. end speech now.";
+		document.getElementById("infotext").innerHTML = "time over, end speech now.";
 	}
 
 	var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
