@@ -1,5 +1,5 @@
 {
-  "name": "athenaliu.me",
+  "name": "emilyxietty.github.io",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,10 +11,7 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/athenalry/athenaliu.me/issues"
-  },
-  "homepage": "https://github.com/athenalry/athenaliu.me#readme",
+  "homepage": "emilyxietty.github.io",
   "keywords": [],
   "description": "",
   "dependencies": {

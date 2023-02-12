@@ -1,45 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=open sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
-        body {
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        body p {
-            font-weight: 300; 
-        }
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    max-height: 100vh;
+    /* height: 100%; */
+}
+body p {
+    font-weight: 300; /* You specify the number you see next to the fonts to change from light to bold ie you would put 700 etc. etc. */
+}
 p {
   font-weight: 300;
 }
+
 #medium{
   margin-top: 20px;
-  /* color:white; */
-}
-.about-banner {
-	display: block;
-	height: 50vh;
-	padding: 8vh;
-	padding-left:15vh;
-	padding-right:15vh;
-  background-color: white;
-
-
-}
-.grey1 {
-	display: block;
-  width:100%;
-  padding:auto;
-  margin:auto;
-	padding:2rem;
-	background-color:#333;
-	border-radius:1rem;
-	color:#CCC;
-  height:100%;
-}
-.col-4 {
-  height:30vh;
-}
-.col-8 {
-  height:30vh;
 }
 
 #social , #btns{
@@ -88,15 +62,19 @@ body {
   font-size: 14px;
   width:100%;
 }
+.aboutssection {
+  padding:0;
+  height: 50vh;
+}
 .pfp {
   padding:auto;
   margin:auto;
   width:15rem;
   border-radius: 2vh;
 }
-img {
+/* img {
   max-width: 90%;
-}
+} */
 .section {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -399,6 +377,9 @@ padding-right:10rem;
 }
 
 @media(max-width: 767px){
+  /* .header-style .social-icons {
+    display: none;
+  } */
   .header-style {
     width: 100%;
     bottom: auto;
@@ -501,6 +482,11 @@ padding-right:10rem;
 .navbar-toggler span + span + span {
   width: 10px;
 }
+/**/
+
+/* .header-nav-01 .social-icons a {
+  color: #fafafa;
+} */
 
 .header-nav-01.fixed-header {
   top: 0;
@@ -533,10 +519,15 @@ padding-right:10rem;
 }
 
 /*---------------------------------
+* Header White
+-----------------------------------*/
+
+
+/*---------------------------------
 * 06. Home Banner
 -----------------------------------*/
 .full-screen {
-  min-height: 100vh;
+  max-height: 50vh;
 }
 .part-screen {
   min-height: 50vh;
@@ -722,14 +713,6 @@ padding-right:10rem;
   /* padding-bottom: 50px; */
   padding-left: 50px;
  }
- /* .aboutus-text span {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  margin-bottom: 15px;
- } */
  .aboutus-text h3 {
   font-weight: 600;
   color: #1d242B;
@@ -739,7 +722,6 @@ padding-right:10rem;
  .aboutus-text p {
   color: #1d242B;
   font-size: 14px;
-  /* width: 500px; */
   max-width: 100%;
  }
 
@@ -751,12 +733,6 @@ padding-right:10rem;
     padding-left: 50px;
     margin: 15px 0;
  }
- /* .btn-dark {
-   background-color:#0b0b45;
-   outline-color:#0b0b45;
-
-   opacity:80%;
- } */
  .aboutus-text .counter-col i {
   font-size: 34px;
   position: absolute;
@@ -965,6 +941,8 @@ padding-right:10rem;
 .owl-nav .owl-next:hover {
   background: #000;
 }
+
+
 
 /*-----------------------------------------
 *  Footer

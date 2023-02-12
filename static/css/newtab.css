@@ -1,63 +1,48 @@
 .banner1{
 	width:100%;
-	height:700px;
+	/* height:700px; */
+	height: 50rem;
+	justify-content: center;
+	align-items: center;
 	background-image: url("../img/newtabimg/marquee-giblify.png");
-	background-size:cover;
-	background-attachment:relative;
-
-	/* max-width:100%;
-	margin-left:0;
-	margin-right:0;
-	overflow:hidden;
-	position:fixed;*/
-}
-.banner1:hover {
-    display: block;
-    /* background: rgba(0, 0, 0, .2); */
-		filter: brightness(.2); contrast(1.1);
-
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-size:cover; */
+	/* background-attachment:relative; */
 }
 .banner2{
 	width:100%;
-	height:700px;
+	/* height:700px; */
+	height: 50rem;
+
+	justify-content: center;
+	align-items: center;
 	background-image: url("../img/newtabimg/marquee-pomo.png");
-	background-size:cover;
-	background-attachment:relative;
-
-/*
-	max-width:100%;
-	margin-left:0;
-	margin-right:0;
-	overflow:hidden;
-	position:relative; */
-}
-.banner2:hover {
-    display: block;
-    /* background: rgba(0, 0, 0, .6); */
-		filter: brightness(.2); contrast(1.1);
-
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-size:cover; */
+	/* background-attachment:relative; */
 }
 
 .banner3{
 	width:100%;
-	height:700px;
+	height: 50rem;
+
+	/* height:700px; */
+	justify-content: center;
+	align-items: center;
 	background-image: url("../img/newtabimg/marquee-swiftify.png");
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	background-size:cover;
 	background-attachment:relative;
-
-	/* max-width:100%;
-	margin-left:0;
-	margin-right:0;
-	overflow:hidden;
-	position:relative; */
 }
-.banner3:hover {
-    display: block;
-		/* opacity: 0.8; */
-		filter: brightness(.2); contrast(1.1);
-
-}
-
 .bannersec{
 	padding: 0;
 
@@ -91,11 +76,6 @@ img{
 
 .inform{
 	display:grid;
-	/* padding:50px; */
-	/* text-align:center; */
 	justify-content: center;
-	/* margin:auto */
-	/* align-content:center; */
-
 
 }
