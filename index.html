@@ -2,199 +2,1451 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emily Xie</title>
 
-	<script src="https://kit.fontawesome.com/bd21bfdb73.js"></script>
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./images/soot_48.png" type="image/x-icon">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=yes">
-	<meta name="description" content="Emily Xie About">
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
 
-	<link rel="stylesheet" href="./static/css/style2.css">
-
-	<!-- Page Title -->
-	<title>Emily Xie</title>
-
-
-	<!-- Plugin CSS -->
-	<link href="static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="static/plugin/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
-	<link href="static/plugin/magnific/magnific-popup.css" rel="stylesheet">
-	<!-- / -->
-
-	<!-- Theme Style -->
-	<link href="static/css/index.css" rel="stylesheet">
-
-	<!-- / -->
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<!-- Body Start -->
+<body>
 
-<body data-spy="scroll" data-target="#navbar" data-offset="98">
+  <!--
+    - #MAIN
+  -->
 
-	<!-- Header -->
-	<header>
-		<nav class="navbar header-nav-01 fixed-top navbar-expand-lg">
-			<div class="container">
-				<a class="navbar-brand" href="#">
-					<!--Add for top left corner<span class="theme-bg"></span>-->
-				</a>
-				<!-- Mobile Toggle -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
-					aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
+  <main>
 
-				<!-- Top Menu -->
-				<div class="collapse navbar-collapse justify-content-end" id="navbar">
-					<ul class="navbar-nav ml-auto">
-						<li><a class="nav-link active" href="#home">Home</a></li>
-						<li><a class="nav-link" href="./pages/newtab.html">New Tab Chrome</a></li>
-						<li><a class="nav-link" href="./pages/tempoapp.html">DebateTempo (iOS)</a></li>
-						<li><a class="nav-link" href="./pages/tempo.html" target="_blank">Debate Timer</a></li>
-						<li><a class="nav-link" href="./pages/swift.html" target="_blank">Swift Quotes</a></li>
-						<li><a class="nav-link" href="./pages/debateresume.html">Debate Resume</a></li>
-						<li><a class="nav-link" href="./pages/design.html">Graphic Design</a></li>
-						
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./images/avatar.jpeg" alt="Emily Xie" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Emily Xie">Emily Xie</h1>
+
+          <p class="title">Software Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:emily.xietty@gmail.com" class="contact-link">emily.xietty@gmail.com</a>
+            </div>
+
+          </li>
+
+          <!-- PHONE -->
+          <!-- <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+            </div>
+
+          </li> -->
+
+          <!-- BIRTHDAY -->
+          <!-- <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">June 23, 1982</time>
+            </div>
+
+          </li> -->
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Toronto, Ontario, Canada</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/emilyxie-2000/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/emilyxietty" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <!-- <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li> -->
+
+        </ul>
+
+      </div>
+
+    </aside>
 
 
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-	<!-- Header End -->
 
-	<!-- main -->
-	<main>
-		<section id="home" class="home-banner-01 bg-no-repeat bg-cover bg-fixed home-bg"
-			style="background-image: url(static/img/bg2.jpg);">
-			<div id="particles-box"></div>
-			<div class="container">
-				<div class="row part-screen align-items-center">
 
-					<div class="col-12 col-md-12 text-center">
-						<p><span id="type-it"></span></p>
-						<div class="btn-bar ">
-						</div>
-						<div class="home-text">
-							<h5 class="font-alt">print ( "Hello World!" )</h5>
-						</div>
 
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="aboutme" class="section aboutssection">
-			<div class="container">
-				<div class="row align-items-start">
-					<div class="col col-md-3 text-top">
-						<img class="pfp" src="static/img/pfp2.png" title="" alt="" />
-					</div>
+    <!--
+      - #main-content
+    -->
 
-					<div class="col-md-8">
-						<div class="aboutus-text">
-							<h3 class="font-alt">Hi, I'm Emily.</h3>
-							<p>
-								I'm a recent Computer Science and Psychology graduate, interested in coding, design,
-								debate, psychology, and music.
-								<br><br>
-								I'm interested in the intersection of Computer Science and Psychology. I believe that
-								technology is fundamental to the understanding of human cognition, and that human
-								cognition shapes the technology we create.
-								<br><br>
-								I'm passionate about always learning more. Most recently, I have been learning a lot
-								more about AI, specifically neural networks (using TensorFlow). I've created a few Google Chrome extensions (Manifest v3 +
-								Javascript, HTML, CSS), and have launched an iOS app (SwiftUI).
-							</p>
-							<div id="social">
-								<ul style="list-style-type:none">
-									<li>
-										<a href="https://github.com/emilyxietty" target="_blank">
-											<span class="social-icons">
-												<i class="fab fa-github fa-3x" style="font-size:2rem"></i>
-											</span>
-										</a>
-									</li>
+    <div class="main-content">
 
-									<li>
-										<a href="https://www.linkedin.com/in/emilyxie-2000/" target="_blank">
-											<span class="social-icons">
-												<i class="fab fa-linkedin fa-3x" style="font-size:2rem"></i>
-											</span>
-										</a>
-									</li>
+      <!--
+        - #NAVBAR
+      -->
 
-									<li>
-										<a href=mailto: exie5@uwo.ca>
-											<span class="social-icons">
-												<i class="fas fa-envelope fa-3x" style="font-size:2rem"></i>
-											</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+      <nav class="navbar">
 
-				</div>
-			</div>
+        <ul class="navbar-list">
 
-		</section>
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
 
-	</main>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
 
-	<!-- Footer -->
-	<!-- <footer class="footer">
-		<div class="container">
-			<div class="footer-logo">
-				<span>Emily Xie</span>
-			</div>
-			<div class="text-center center-block">
-				<a href="https://www.linkedin.com/in/emilyxie-2000/" target="_blank">
-					<span class="social-icons-negative">
-						<i class="fab fa-linkedin "></i>
-					</span>
-				</a>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
 
-				<a href="https://www.github.com/emilyxietty" target="_blank">
-					<span class="social-icons-negative">
-						<i class="fab fa-github"></i>
-					</span>
-				</a>
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
 
-				<a href=mailto: "exie5@uwo.ca">
-					<span class="social-icons-negative">
-						<i class="fas fa-envelope-square"></i>
-					</span>
-				</a>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li> -->
 
-			</div>
-		</div>
-	</footer> -->
-	<!-- Footer End -->
-	<!-- jQuery -->
-	<script src="static/js/jquery-3.2.1.min.js"></script>
-	<script src="static/js/jquery-migrate-3.0.0.min.js"></script>
+        </ul>
 
-	<!-- Plugins -->
-	<script src="static/plugin/bootstrap/js/popper.min.js"></script>
-	<script src="static/plugin/bootstrap/js/bootstrap.min.js"></script>
-	<script src="static/plugin/owl-carousel/js/owl.carousel.min.js"></script>
-	<script src="static/plugin/typeit-master/typeit.min.js"></script>
-	<script src="static/plugin/isotope/isotope.pkgd.min.js"></script>
-	<script src="static/plugin/magnific/jquery.magnific-popup.min.js"></script>
+      </nav>
 
-	<!-- custom -->
-	<script src="static/js/custom.js"></script>
-	<script src="static/js/table.js"></script>
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hi! I'm a Computer Science and Psychology graduate from the University of Western Ontario. I currently work at Bell Canada as a Software Developer in our Network and Technology Services Business Intelligence Group (NTS BIG), with a focus on data engineering.
+          </p>
+
+          <p>
+            I'm interested in the intersection of Computer Science and Psychology. I believe that technology is fundamental to the understanding of human cognition, and that human cognition shapes the technology we create.
+          </p>
+
+          <p>
+            Recently, I've been learning about AI, building neural networks with TensorFlow. I've created a few Google Chrome extensions (Manifest v3 + Javascript, HTML, CSS), and have launched an iOS app (SwiftUI).
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <!-- <section class="service">
+
+          <h3 class="h3 service-title">What I'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section> -->
+
+
+        <!--
+          - testimonials
+        -->
+
+        <!-- <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section> -->
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./images/avatar-1.png" alt="" width="80" data-modal-img>
+              </figure>
+
+              <img src="./images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title></h4>
+
+              <time datetime="2021-06-14"></time>
+
+              <div data-modal-text>
+                <p>
+                  
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <!-- <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section> -->
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="construct-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <!-- <h4 class="h4 timeline-item-subtitle">Bell Canada (Toronto, ON)</h4> -->
+              <h4 class="h4 timeline-item-title">Software Developer</h4>
+              <span>Bell Canada (Toronto, ON)</span>
+              <span>May 2023 — Present</span>
+
+              <p class="timeline-text">
+                Network and Technology Services Business Intelligence (NTS BIG) Team.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+                <!-- <h4 class="h4 timeline-item-subtitle">Bell Canada (Toronto, ON)</h4> -->
+                <h4 class="h4 timeline-item-title">Business Analyst Intern</h4>
+                <span>Bell Canada (Toronto, ON)</span>
+                <span>May 2022 — Aug 2022</span>
+  
+                <p class="timeline-text">
+                    Network and Technology Services Business Intelligence (NTS BIG) Team.
+                </p>
+  
+              </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Debate Coach</h4>
+              <span>Toronto Debate Academy</span>
+              <span>2018 — Present</span>
+
+              <p class="timeline-text">
+                Beginner and Advanced teams.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+  
+              <h3 class="h3">Education</h3>
+            </div>
+  
+            <ol class="timeline-list">
+  
+              <li class="timeline-item">
+  
+                <h4 class="h4 timeline-item-title">University of Western Ontario</h4>
+  
+                <span>2018-2023</span>
+  
+                <p class="timeline-text">
+                  BSc. Computer Science, Min. Psychology
+                </p>
+  
+                <span>Debate</span>
+                <p class="timeline-subtext">
+                  2-time Canadian Parliamentary Public Speaking Champion, Multi-time Breaking North American Debating Championship Team, World's Championship Delegation, National Ombudsperson from 2019-2023, UWO Debate Society Vice President from 2018-2020
+                </p>
+                <span>CAISA Fashion Show</span>
+                <p class="timeline-subtext">
+                  Canada's Largest Student-Run Charity Fashion Show. Graphics Director from 2019-22, Creative Director from 2022-23
+                </p>
+                <span>Western Orientation</span>
+                <p class="timeline-subtext">
+                  Residence Soph from 2019-20, Off-Campus Soph from 2021-23, 2-time orientation-league flag football semi-finalists, Off Campus Media Captain
+                </p>
+  
+              </li>
+  
+              <!-- <li class="timeline-item">
+  
+                <h4 class="h4 timeline-item-title">New york academy of art</h4>
+  
+                <span>2006 — 2007</span>
+  
+                <p class="timeline-text">
+                  Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
+                  omnis..
+                </p>
+  
+              </li> -->
+  
+            </ol>
+  
+          </section>
+        
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+                <ion-icon name="bulb-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">My skills</h3>
+
+          </div>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Languages</h4>
+
+                <p class="service-item-text">
+                  Python, SQL, C++, C, Java, HTML/CSS/JavaScript, Swift
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Technologies/Platforms</h4>
+
+                <p class="service-item-text">
+                  Databases (Teradata, Oracle), Cloud (Google Cloud, Microsoft Azure), Flutter, Git, IBM DataStage, MicroStrategy
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./images/icon-cert.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Certifications</h4>
+
+                <p class="service-item-text">
+                  SAFe (Scaled Agile) 6.0 for Teams, Microsoft Azure Fundamentals (AZ-900)
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+          <!-- <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul> -->
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>CS Projects</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Graphic Design</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>CS Projects</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Graphic Design</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="cs projects">
+              <a href="https://chromewebstore.google.com/detail/kdaipjfpbngmcginhhahacjkkkpbaefh" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/projects/ghiblify.png" alt="ghiblify" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Ghiblify - New Tab Chrome Extension</h3>
+
+                <p class="project-category">CS Projects</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cs projects">
+                <a href="https://digitrecognizer.streamlit.app/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/digitrec.png" alt="digit-recognizer" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">Tensorflow Handwritten Digit Classifier</h3>
+  
+                  <p class="project-category">CS Projects</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="cs projects">
+                <a href="https://knn-breastcancer-ml.streamlit.app/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/bcclass.png" alt="breast-cancer-recognizer" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">KNN Breast Cancer Classifier</h3>
+  
+                  <p class="project-category">CS Projects</p>
+  
+                </a>
+              </li>
+
+            <li class="project-item  active" data-filter-item data-category="cs projects">
+                <a href="https://apps.apple.com/ca/app/debatetempo/id1626097043" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/tempoapp.png" alt="debate-tempo-app" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">Debate Tempo, iOS Debate Timer</h3>
+  
+                  <p class="project-category">CS Projects</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="cs projects">
+                <a href="https://emilyxietty.github.io/pages/tempo.html" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/onlinetimer.png" alt="online-debate-timer" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">Online BP Debate Timer</h3>
+  
+                  <p class="project-category">CS Projects</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="cs projects">
+                <a href="https://emilyxietty.github.io/pages/swift.html" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/swift.png" alt="swift-quotes" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">Taylor Swift Quotes Generator</h3>
+  
+                  <p class="project-category">CS Projects</p>
+  
+                </a>
+              </li>
+
+
+
+              <!-- <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/istoriafinal" target="_blank">
+                  <figure class="project-img">
+                    <img src="./images/projects/graphics/a1.png" alt="graphic" loading="lazy">
+                    <video autoplay loop preload="auto" controls>
+                        <source src="./images/projects/graphics/a3.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+                      </video>
+                  </figure>
+                  <p class="project-category">Graphic Design</p>
+                </a>
+              </li> -->
+              <!-- <li class="project-item  active" data-filter-item data-category="graphic design">
+                <figure class="project-img">
+                <img src="./images/projects/graphics/d7.png" alt="graphic" loading="lazy">
+                </figure>
+                <p class="project-category">Graphic Design</p>
+              </li> -->
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <figure class="project-img">
+                <img src="./images/projects/graphics/a7.gif" alt="graphic" loading="lazy">
+                </figure>
+                <p class="project-category">Graphic Design</p>
+              </li>
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <figure class="project-img">
+                <img src="./images/projects/graphics/d4.png" alt="graphic" loading="lazy">
+                </figure>
+                <p class="project-category">Graphic Design</p>
+              </li>
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <figure class="project-img">
+                <img src="./images/projects/graphics/d3.png" alt="graphic" loading="lazy">
+                </figure>
+                <p class="project-category">Graphic Design</p>
+              </li>
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <figure class="project-img">
+                <img src="./images/projects/graphics/d2.png" alt="graphic" loading="lazy">
+                </figure>
+                <p class="project-category">Graphic Design</p>
+              </li>
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <figure class="project-img">
+                <img src="./images/projects/graphics/a6.gif" alt="graphic" loading="lazy">
+                </figure>
+                <p class="project-category">Graphic Design</p>
+              </li>
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <figure class="project-img">
+                <img src="./images/projects/graphics/a4.gif" alt="graphic" loading="lazy">
+                </figure>
+                <p class="project-category">Graphic Design</p>
+              </li>
+              <!-- <li class="project-item  active" data-filter-item data-category="graphic design">
+                <figure class="project-img">
+                <img src="./images/projects/graphics/a2.gif" alt="graphic" loading="lazy">
+                </figure>
+                <p class="project-category">Graphic Design</p>
+              </li> -->
+              
+
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/istoriafinal" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/istoria.png" alt="istoria" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Istoria Lookbook 2023</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/finalmira-2" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/mira.png" alt="mira" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Mira Lookbook 2022</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/goodwill-sidelb-fixed" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/goodwill.png" alt="goodwill" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Fall Goodwill Lookbook 2022</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/cfs-falllb22-v2" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/dawn.png" alt="dawn" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Fall Lookbook 2021</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/on_hold" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/onhold.png" alt="onhold" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Summer Lookbook 2021</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/bonafide" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/bonafide.png" alt="bonafide" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Summer Lookbook 2020</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/avenoir-lookbook-revised1" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/avenoir.png" alt="avenoir" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Avenoir Lookbook 2020</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/gen_xyz_final" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/genxyz.png" alt="gen_xyz" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Fall Lookbook 2019</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/peaches-and-cream" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/peaches.png" alt="peaches-and-cream" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Summer Lookbook 2019</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/lexus-final" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/lexus.png" alt="lexus" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Lexus Lookbook 2019</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/aria" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/aria.png" alt="aria" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Aria Lookbook 2019</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+
+              <li class="project-item  active" data-filter-item data-category="graphic design">
+                <a href="https://issuu.com/caisafashionshow/docs/chroma_final" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+  
+                    <img src="./images/projects/chroma.png" alt="chroma" loading="lazy">
+                  </figure>
+  
+                  <h3 class="project-title">CFS Fall Winter Lookbook 2018</h3>
+  
+                  <p class="project-category">Graphic Design</p>
+  
+                </a>
+              </li>
+              
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <!-- <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article> -->
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <!-- <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article> -->
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
-<!-- Body End -->
 
 </html>
