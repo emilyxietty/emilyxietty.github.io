@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghiblify — Emily Xie</title>
+
+  <link rel="shortcut icon" href="../images/soot_48.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <main>
+
+    <!-- #SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="../images/avatar.jpeg" alt="Emily Xie" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Emily Xie">Emily Xie</h1>
+          <p class="title">Software Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:emily.xietty@gmail.com" class="contact-link">emily.xietty@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Seattle, WA</address>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/emilyxie-2000/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://github.com/emilyxietty" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!-- #main-content -->
+    <div class="main-content">
+
+      <!-- #NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link" href="../index.html">About</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="./resume.html">Resume</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link active" href="./ghiblify.html">Ghiblify</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!-- #GHIBLIFY -->
+      <article class="ghiblify active">
+
+        <header>
+          <h2 class="h2 article-title">Ghiblify</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            <strong>Ghiblify</strong> is a Studio Ghibli–themed new tab page
+            for Chrome — a calm, customizable dashboard of widgets over a
+            rotating background of Ghibli film stills. It's my biggest side
+            project, currently on its second major release.
+          </p>
+
+          <p>
+            v2 is a complete rewrite in <strong>React 19 + TypeScript</strong>,
+            bundled with <strong>Vite</strong>. Every widget is draggable,
+            resizable, and edit-mode aware — clock, weather, todos, pomodoro,
+            sticky notes, quick links, and a bookmarks panel that slides in
+            from the right with cross-folder search.
+          </p>
+        </section>
+
+        <section class="ghiblify-highlights">
+          <h3 class="h3 ghiblify-section-title">What's in v2</h3>
+          <ul class="ghiblify-list">
+            <li><strong>12 widgets</strong> with consistent drag, resize, and edit modes.</li>
+            <li><strong>14 themed palettes</strong> including a glassy Frost mode and a high-contrast accessibility theme.</li>
+            <li><strong>7 languages</strong> — English, 日本語, Español, Français, 中文, Português, 한국어.</li>
+            <li><strong>Cursor animations</strong> — soot sprites, sparkles, petals, leaves.</li>
+            <li><strong>45 background images</strong> bundled locally so they load reliably worldwide.</li>
+            <li><strong>Live release notes</strong> — the "What's new" modal links to Discord instead of carrying changelog in code.</li>
+          </ul>
+        </section>
+
+        <section class="about-cta ghiblify-cta-group">
+          <a class="cta-card"
+             href="https://chromewebstore.google.com/detail/Ghiblify/kdaipjfpbngmcginhhahacjkkkpbaefh"
+             target="_blank" rel="noopener">
+            <div class="cta-card-icon">
+              <ion-icon name="logo-chrome"></ion-icon>
+            </div>
+            <div class="cta-card-body">
+              <p class="cta-card-eyebrow">Install</p>
+              <h4 class="cta-card-title">Get it on the Chrome Web Store</h4>
+              <p class="cta-card-text">Free, no account, no tracking.</p>
+            </div>
+            <div class="cta-card-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+
+          <a class="cta-card"
+             href="https://github.com/emilyxietty/ghiblify-v2"
+             target="_blank" rel="noopener">
+            <div class="cta-card-icon">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+            <div class="cta-card-body">
+              <p class="cta-card-eyebrow">Source</p>
+              <h4 class="cta-card-title">emilyxietty/ghiblify-v2</h4>
+              <p class="cta-card-text">React 19 · TypeScript · Vite · Chrome Manifest v3.</p>
+            </div>
+            <div class="cta-card-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+
+          <a class="cta-card"
+             href="https://discord.gg/8re4UaZ2fX"
+             target="_blank" rel="noopener">
+            <div class="cta-card-icon">
+              <ion-icon name="logo-discord"></ion-icon>
+            </div>
+            <div class="cta-card-body">
+              <p class="cta-card-eyebrow">Community</p>
+              <h4 class="cta-card-title">Join Discord for updates</h4>
+              <p class="cta-card-text">Release notes, requests, and previews — straight from the dev.</p>
+            </div>
+            <div class="cta-card-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+        </section>
+
+        <footer class="ghiblify-legal">
+          <a href="../chromeprivacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+        </footer>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <script src="../js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
