@@ -34,14 +34,14 @@
     hsla(240, 2%, 11%, 0) 100%
   ), hsl(240, 2%, 13%);
   --bg-gradient-yellow-1: linear-gradient(
-    to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    to bottom right,
+    hsl(200, 95%, 75%) 0%,
+    hsla(195, 95%, 72%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
-    135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
+    135deg,
+    hsla(200, 95%, 75%, 0.251) 0%,
+    hsla(210, 95%, 70%, 0) 59.86%
   ), hsl(240, 2%, 13%);
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
@@ -49,9 +49,9 @@
     hsla(0, 0%, 25%, 0) 50%
   );
   --text-gradient-yellow: linear-gradient(
-    to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    to right,
+    hsl(200, 95%, 75%),
+    hsl(210, 95%, 70%)
   );
 
   /* solid */
@@ -63,8 +63,8 @@
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --orange-yellow-crayola: hsl(200, 95%, 75%);
+  --vegas-gold: hsl(200, 60%, 65%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -1894,4 +1894,309 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+
+
+
+
+/*-----------------------------------*\
+  #LIGHT BLUE THEME (palette inversion)
+\*-----------------------------------*/
+
+/*
+ * Strategy: redefine the original "dark" palette variables to light-blue
+ * equivalents and the "white" text variables to dark navy. This lets the
+ * cascade carry the new colors through every selector — including the
+ * ::before overlays that the original theme uses to paint card surfaces —
+ * without having to override hundreds of individual rules.
+ *
+ * Contrast: text vars (`--white-1/2`, `--light-gray`) become dark navy so
+ * they stay readable on the new light surfaces. Accent vars
+ * (`--orange-yellow-crayola`, `--vegas-gold`) become a saturated blue so
+ * icons, links, and active states stand out.
+ */
+
+:root {
+  /* surfaces */
+  --jet:            hsl(200, 55%, 85%);       /* borders, separators */
+  --onyx:           hsl(200, 70%, 92%);       /* tag chip background */
+  --eerie-black-1:  hsl(200, 80%, 96%);       /* card inner */
+  --eerie-black-2:  hsl(200, 70%, 94%);       /* card outer */
+  --smoky-black:    hsl(195, 100%, 98%);      /* page (also selection text — overridden below) */
+
+  /* text — dark navy, WCAG AA on the surfaces above */
+  --white-1:        hsl(215, 40%, 20%);
+  --white-2:        hsl(215, 35%, 28%);
+  --light-gray:     hsl(215, 22%, 42%);
+  --light-gray-70:  hsla(215, 22%, 42%, 0.85);
+
+  /* accent — saturated sky blue (was a pale blue) */
+  --orange-yellow-crayola: hsl(205, 80%, 45%);
+  --vegas-gold:            hsl(200, 70%, 50%);
+
+  /* status (kept warm) */
+  --bittersweet-shimmer: hsl(345, 70%, 60%);
+
+  /* gradients — soft pastel sky */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(200, 80%, 96%) 3%,
+    hsl(200, 60%, 92%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right,
+    hsla(200, 80%, 96%, 0.5) 0%,
+    hsla(200, 70%, 94%, 0) 100%
+  ), hsl(200, 80%, 96%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right,
+    hsl(195, 90%, 78%) 0%,
+    hsla(335, 90%, 88%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+    135deg,
+    hsla(195, 90%, 78%, 0.45) 0%,
+    hsla(335, 90%, 88%, 0) 59.86%
+  ), hsl(200, 80%, 96%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(200, 60%, 80%) 0%,
+    hsla(200, 60%, 80%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right,
+    hsl(205, 80%, 45%),
+    hsl(195, 75%, 55%)
+  );
+
+  /* softer shadows for the lighter palette */
+  --shadow-1: 0 6px 20px hsla(210, 60%, 50%, 0.12);
+  --shadow-2: 0 10px 30px hsla(210, 60%, 50%, 0.15);
+  --shadow-3: 0 14px 36px hsla(210, 60%, 50%, 0.18);
+  --shadow-4: 0 18px 44px hsla(210, 60%, 50%, 0.18);
+  --shadow-5: 0 22px 60px hsla(210, 60%, 50%, 0.20);
+}
+
+/* Cute, rounded body font; loaded in index.html */
+html { font-family: 'Quicksand', 'Poppins', sans-serif; }
+
+/* Page background: pastel sky with two soft halos */
+body {
+  background:
+    radial-gradient(at 10% 0%,  hsl(200, 90%, 93%) 0%, transparent 55%),
+    radial-gradient(at 90% 10%, hsl(335, 90%, 93%) 0%, transparent 50%),
+    radial-gradient(at 50% 100%, hsl(195, 90%, 92%) 0%, transparent 60%),
+    hsl(195, 100%, 98%);
+  min-height: 100vh;
+  color: var(--white-1);
+}
+
+/*
+ * Selection: var(--smoky-black) is used as the selection text color
+ * (style.css:151), and we just remapped it to a near-white sky tone —
+ * which would be invisible on any accent background. Restore contrast.
+ */
+::selection {
+  background: hsl(195, 90%, 80%);
+  color: hsl(215, 40%, 20%);
+}
+
+/* Slightly chunkier rounding for a softer feel */
+article,
+.sidebar,
+.testimonials-modal {
+  border-radius: 24px;
+}
+
+.icon-box,
+.service-icon-box,
+.project-img,
+.content-card,
+.info_more-btn,
+.form-input,
+.form-btn {
+  border-radius: 16px;
+}
+
+.filter-list button,
+.filter-select,
+.select-list,
+.navbar {
+  border-radius: 999px;
+}
+
+/*
+ * Scrollbar overrides for >=1250px (style.css ~1788) — the original
+ * thumb is white-on-dark; on a light page it disappears.
+ */
+body::-webkit-scrollbar-track {
+  background: hsl(200, 80%, 96%);
+}
+body::-webkit-scrollbar-thumb {
+  border: 5px solid hsl(200, 80%, 96%);
+  background: hsl(200, 55%, 75%);
+  box-shadow: none;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: hsl(205, 80%, 55%);
+}
+
+/*
+ * Navbar: original uses a hardcoded dark hsla() (style.css:462) that
+ * the palette redefinition doesn't catch. Light pill instead.
+ */
+.navbar {
+  background: hsla(200, 90%, 97%, 0.85);
+}
+
+
+/*-----------------------------------*\
+  #ABOUT CTA CARD
+\*-----------------------------------*/
+
+.about-cta { margin-top: 24px; }
+
+.cta-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, hsl(200, 90%, 96%), hsl(335, 90%, 96%));
+  border: 1px solid hsl(200, 60%, 82%);
+  border-radius: 20px;
+  box-shadow: var(--shadow-2);
+  color: var(--white-1);
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.cta-card:hover,
+.cta-card:focus {
+  transform: translateY(-2px);
+  border-color: var(--orange-yellow-crayola);
+  box-shadow: var(--shadow-3);
+}
+
+.cta-card-icon {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: white;
+  color: var(--orange-yellow-crayola);
+  font-size: 24px;
+  box-shadow: 0 4px 12px hsla(210, 60%, 60%, 0.18);
+}
+
+.cta-card-body { flex: 1 1 auto; min-width: 0; }
+
+.cta-card-eyebrow {
+  margin: 0 0 2px;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--light-gray);
+}
+
+.cta-card-title {
+  margin: 0 0 4px;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-600);
+  color: var(--white-1);
+}
+
+.cta-card-text {
+  margin: 0;
+  font-size: var(--fs-7);
+  color: var(--light-gray);
+  line-height: 1.5;
+}
+
+.cta-card-arrow {
+  flex: 0 0 auto;
+  color: var(--orange-yellow-crayola);
+  font-size: 22px;
+  transition: transform 0.18s ease;
+}
+
+.cta-card:hover .cta-card-arrow,
+.cta-card:focus .cta-card-arrow {
+  transform: translateX(4px);
+}
+
+
+/*-----------------------------------*\
+  #GHIBLIFY PAGE
+\*-----------------------------------*/
+
+.ghiblify-highlights { margin-top: 24px; }
+
+.ghiblify-section-title {
+  margin-bottom: 14px;
+  color: var(--white-1);
+}
+
+.ghiblify-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.ghiblify-list li {
+  position: relative;
+  padding: 10px 14px 10px 36px;
+  background: hsl(200, 80%, 96%);
+  border: 1px solid hsl(200, 60%, 86%);
+  border-radius: 14px;
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  line-height: 1.5;
+}
+
+.ghiblify-list li::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--orange-yellow-crayola);
+  box-shadow: 0 0 0 4px hsla(205, 80%, 55%, 0.18);
+}
+
+.ghiblify-list li strong { color: var(--white-1); }
+
+.ghiblify-cta-group {
+  display: grid;
+  gap: 12px;
+}
+
+.ghiblify-legal {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid hsl(200, 60%, 88%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: var(--fs-7);
+}
+
+.ghiblify-legal a {
+  color: var(--light-gray);
+  text-decoration: none;
+  transition: color var(--transition-1);
+}
+
+.ghiblify-legal a:hover,
+.ghiblify-legal a:focus {
+  color: var(--orange-yellow-crayola);
 }
