@@ -110,6 +110,11 @@
       <!-- #GHIBLIFY -->
       <article class="ghiblify active">
 
+        <figure class="ghiblify-hero">
+          <img src="../ghiblify/promo/marquee.webp"
+               alt="Ghiblify — a Studio Ghibli-themed new tab page for Chrome">
+        </figure>
+
         <header>
           <h2 class="h2 article-title">Ghiblify</h2>
         </header>
@@ -129,6 +134,52 @@
             sticky notes, quick links, and a bookmarks panel that slides in
             from the right with cross-folder search.
           </p>
+        </section>
+
+        <section class="ghiblify-screens">
+          <h3 class="h3 ghiblify-section-title">See it in action</h3>
+
+          <div class="carousel" data-carousel role="group" aria-label="Ghiblify screenshots">
+            <div class="carousel-viewport">
+              <ul class="carousel-track" data-carousel-track>
+                <li class="carousel-slide">
+                  <img src="../ghiblify/promo/screenshot-1.webp"
+                       alt="Ghiblify new tab page — a Studio Ghibli-inspired Chrome extension" loading="lazy">
+                </li>
+                <li class="carousel-slide">
+                  <img src="../ghiblify/promo/screenshot-2.webp"
+                       alt="Over 1000 Ghibli film stills to choose from as rotating backgrounds" loading="lazy">
+                </li>
+                <li class="carousel-slide">
+                  <img src="../ghiblify/promo/screenshot-3.webp"
+                       alt="Drag widgets, switch palettes, and swap cursors" loading="lazy">
+                </li>
+                <li class="carousel-slide">
+                  <img src="../ghiblify/promo/screenshot-4.webp"
+                       alt="Many widgets to choose from to customize your new tab" loading="lazy">
+                </li>
+                <li class="carousel-slide">
+                  <img src="../ghiblify/promo/screenshot-5.webp"
+                       alt="Ghiblify — a little magic in every tab" loading="lazy">
+                </li>
+                <li class="carousel-slide">
+                  <img src="../ghiblify/promo/large-tile.webp"
+                       alt="Ghiblify promotional banner" loading="lazy">
+                </li>
+              </ul>
+            </div>
+
+            <button class="carousel-btn carousel-btn--prev" type="button"
+                    data-carousel-prev aria-label="Previous screenshot">
+              <ion-icon name="chevron-back"></ion-icon>
+            </button>
+            <button class="carousel-btn carousel-btn--next" type="button"
+                    data-carousel-next aria-label="Next screenshot">
+              <ion-icon name="chevron-forward"></ion-icon>
+            </button>
+
+            <div class="carousel-dots" data-carousel-dots></div>
+          </div>
         </section>
 
         <section class="ghiblify-highlights">
@@ -206,6 +257,62 @@
   <script src="../js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Ghiblify screenshot carousel (self-contained — kept out of script.js) -->
+  <script>
+    (function () {
+      var carousel = document.querySelector("[data-carousel]");
+      if (!carousel) return;
+
+      var track = carousel.querySelector("[data-carousel-track]");
+      var slides = Array.prototype.slice.call(track.children);
+      var prevBtn = carousel.querySelector("[data-carousel-prev]");
+      var nextBtn = carousel.querySelector("[data-carousel-next]");
+      var dotsWrap = carousel.querySelector("[data-carousel-dots]");
+      if (!slides.length) return;
+
+      var index = 0;
+
+      var dots = slides.map(function (_, i) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "carousel-dot" + (i === 0 ? " active" : "");
+        dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+        dot.addEventListener("click", function () { goTo(i); });
+        dotsWrap.appendChild(dot);
+        return dot;
+      });
+
+      function update() {
+        track.style.transform = "translateX(" + (-index * 100) + "%)";
+        dots.forEach(function (d, i) { d.classList.toggle("active", i === index); });
+      }
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        update();
+      }
+
+      prevBtn.addEventListener("click", function () { goTo(index - 1); });
+      nextBtn.addEventListener("click", function () { goTo(index + 1); });
+
+      carousel.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") { goTo(index - 1); }
+        else if (e.key === "ArrowRight") { goTo(index + 1); }
+      });
+
+      var startX = null;
+      track.addEventListener("touchstart", function (e) {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+      track.addEventListener("touchend", function (e) {
+        if (startX === null) return;
+        var dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) { goTo(index + (dx < 0 ? 1 : -1)); }
+        startX = null;
+      });
+    })();
+  </script>
 
 </body>
 
