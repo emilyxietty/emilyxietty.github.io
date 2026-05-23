@@ -1,80 +1,128 @@
 'use strict';
 
+/*
+ * Minimal script for the redesigned site:
+ *   - sidebar toggle (only fires if both elements exist)
+ *   - typing-text cycler for any element with data-typing='["a","b",…]'
+ *
+ * The Ghiblify and FAQ carousels each ship their own inline IIFE in the
+ * page that needs them. The games are self-contained modules.
+ */
 
+(function () {
+  var sidebar    = document.querySelector('[data-sidebar]');
+  var sidebarBtn = document.querySelector('[data-sidebar-btn]');
+  if (sidebar && sidebarBtn) {
+    sidebarBtn.addEventListener('click', function () {
+      sidebar.classList.toggle('active');
+    });
+  }
+})();
 
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+/* ─── emoji burst on sticker hover ───────────────────────────────────
+ * Hovering a .sticker fires its leading emoji outward like confetti.
+ * Throttled per-sticker so a quick re-enter doesn't spam the DOM.
+ * ─────────────────────────────────────────────────────────────── */
+(function () {
+  var stickers = document.querySelectorAll('.sticker');
+  // grapheme-aware extraction (handles compound emoji like 🏃‍♀️)
+  var graphemes = (typeof Intl !== 'undefined' && Intl.Segmenter)
+    ? new Intl.Segmenter() : null;
 
-
-
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
+  function leadingEmoji(text) {
+    if (graphemes) {
+      var first = graphemes.segment(text)[Symbol.iterator]().next().value;
+      if (first) return first.segment;
     }
+    var m = text.match(/^\S+/);
+    return m ? m[0] : null;
+  }
 
+  stickers.forEach(function (sticker) {
+    var nextOk = 0;
+    sticker.addEventListener('mouseenter', function () {
+      var now = Date.now();
+      if (now < nextOk) return;
+      nextOk = now + 350;
+
+      var emoji = leadingEmoji(sticker.textContent.trim());
+      if (!emoji) return;
+
+      var rect = sticker.getBoundingClientRect();
+      var cx = rect.left + rect.width / 2;
+      var cy = rect.top + rect.height / 2;
+      var n = 3;
+
+      for (var i = 0; i < n; i++) {
+        var el = document.createElement('span');
+        el.className = 'emoji-burst';
+        el.textContent = emoji;
+        // small lateral spread so the 3 bubbles don't stack perfectly
+        var dx = (i - (n - 1) / 2) * 14 + (Math.random() - 0.5) * 6;
+        var dy = -(28 + Math.random() * 18);    // float upward as it pops
+        el.style.left = cx + 'px';
+        el.style.top  = cy + 'px';
+        el.style.setProperty('--dx', dx.toFixed(1) + 'px');
+        el.style.setProperty('--dy', dy.toFixed(1) + 'px');
+        el.style.animationDelay = (i * 0.06).toFixed(2) + 's';
+        document.body.appendChild(el);
+        (function (node) {
+          setTimeout(function () { node.remove(); }, 900);
+        })(el);
+      }
+    });
   });
-}
+})();
 
 
+/* ─── typing cycler ───────────────────────────────────────────────────
+ * Markup:
+ *   <p class="typing" data-typing='["hello world!","hi I&apos;m Emily!"]'>
+ *     <span class="typing-prompt">$</span>
+ *     <span class="typing-text"></span>
+ *     <span class="typing-caret"></span>
+ *   </p>
+ * Types each phrase forward, pauses, backspaces, then types the next.
+ * Loops indefinitely.
+ * ─────────────────────────────────────────────────────────────── */
+(function () {
+  var els = document.querySelectorAll('.typing[data-typing]');
+  els.forEach(function (el) {
+    var phrases;
+    try { phrases = JSON.parse(el.dataset.typing); } catch (e) { return; }
+    if (!Array.isArray(phrases) || !phrases.length) return;
 
-// Navigation is now real anchor-based (About / Resume / Ghiblify are
-// distinct URLs), so no JS handler is needed here.
+    var textEl = el.querySelector('.typing-text');
+    if (!textEl) return;
+
+    var pi = 0;            // current phrase index
+    var ci = 0;            // current character index
+    var typing = true;
+
+    function tick() {
+      var phrase = phrases[pi];
+      if (typing) {
+        ci++;
+        textEl.textContent = phrase.slice(0, ci);
+        if (ci >= phrase.length) {
+          // hold the finished line for a beat before deleting
+          typing = false;
+          setTimeout(tick, 8000);
+          return;
+        }
+        setTimeout(tick, 95 + Math.random() * 55);
+      } else {
+        ci--;
+        textEl.textContent = phrase.slice(0, ci);
+        if (ci <= 0) {
+          typing = true;
+          pi = (pi + 1) % phrases.length;
+          setTimeout(tick, 700);
+          return;
+        }
+        setTimeout(tick, 50 + Math.random() * 30);
+      }
+    }
+    tick();
+  });
+})();

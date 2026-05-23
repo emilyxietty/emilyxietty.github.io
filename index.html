@@ -2,783 +2,310 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emily Xie</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Xie</title>
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./images/soot_48.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/soot_48.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css?v=17">
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fredoka:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap">
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./images/avatar.jpeg" alt="Emily Xie" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Emily Xie">Emily Xie</h1>
-
-          <p class="title">Software Developer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:emily.xietty@gmail.com" class="contact-link">emily.xietty@gmail.com</a>
-            </div>
-
-          </li>
-
-          <!-- PHONE -->
-          <!-- <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-            </div>
-
-          </li> -->
-
-          <!-- BIRTHDAY -->
-          <!-- <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li> -->
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Seattle, WA</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/emilyxietty/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/emilyxietty" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <!-- <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li> -->
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a class="navbar-link active" href="./index.html">About</a>
-          </li>
-
-          <li class="navbar-item">
-            <a class="navbar-link" href="./pages/resume.html">Resume</a>
-          </li>
-
-          <li class="navbar-item">
-            <a class="navbar-link" href="./pages/ghiblify.html">Ghiblify</a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Hi! I'm Emily — a Software Engineer at TikTok.
-          </p>
-
-          <p>
-            My work sits at the intersection of user-facing design and AI: I'm
-            most interested in weaving intelligent features into product
-            workflows so they feel like a natural part of the experience rather
-            than a bolted-on layer.
-          </p>
-
-          <p>
-            Outside of work, I build Chrome extensions and small apps for fun.
-            My biggest side project is <strong>Ghiblify</strong>, a Studio
-            Ghibli–themed new tab page now on its second major release.
-          </p>
-        </section>
-
-        <section class="about-cta">
-          <a class="cta-card"
-             href="https://chromewebstore.google.com/detail/Ghiblify/kdaipjfpbngmcginhhahacjkkkpbaefh"
-             target="_blank" rel="noopener">
-            <div class="cta-card-icon">
-              <ion-icon name="logo-chrome"></ion-icon>
-            </div>
-            <div class="cta-card-body">
-              <p class="cta-card-eyebrow">Side project</p>
-              <h4 class="cta-card-title">Ghiblify on the Chrome Web Store</h4>
-              <p class="cta-card-text">A Studio Ghibli–inspired new tab — widgets, themes, 7 languages.</p>
-            </div>
-            <div class="cta-card-arrow">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-          </a>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <!-- <section class="service">
-
-          <h3 class="h3 service-title">What I'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section> -->
-
-
-        <!--
-          - testimonials
-        -->
-
-        <!-- <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section> -->
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./images/avatar-1.png" alt="" width="80" data-modal-img>
-              </figure>
-
-              <img src="./images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title></h4>
-
-              <time datetime="2021-06-14"></time>
-
-              <div data-modal-text>
-                <p>
-                  
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <!-- <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section> -->
-
-      </article>
-
-
-
-
-
-      <!-- #PORTFOLIO section removed -->
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <!-- <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article> -->
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <!-- <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article> -->
-
+    <!-- floating background doodles -->
+    <div class="doodles" aria-hidden="true">
+        
+        
+        
+        
+        <span class="doodle doodle--cloud" style="top:  3%; left: 48%; width: 145px;"></span>
+        <span class="doodle doodle--cloud" style="top:  1%; left: 62%; width: 130px;"></span>
+        <span class="doodle doodle--cloud" style="top:  6%; left: 70%; width: 180px;"></span>
+        <span class="doodle doodle--cloud" style="top:  2%; left: 86%; width: 115px;"></span>
+        <span class="doodle doodle--cloud" style="top:  9%; left: 54%; width: 120px;"></span>
+        <span class="doodle doodle--cloud" style="top:  5%; left: 82%; width: 150px;"></span>
+        <span class="doodle doodle--star"  style="top:  4%; left: 56%;"></span>
+        <span class="doodle doodle--squiggle" style="top:  9%; left: 62%;"></span>
+        <span class="doodle doodle--star"  style="top: 90%; left: 14%; width: 18px;"></span>
+        <span class="doodle doodle--star"  style="top: 94%; left: 86%;"></span>
+        <span class="doodle doodle--squiggle" style="top: 92%; left: 40%;"></span>
+        <span class="doodle doodle--squiggle" style="top: 96%; left: 68%;"></span>
     </div>
 
-  </main>
+    <div class="page">
+
+        <!-- ─── SIDEBAR ─────────────────────────────────────────── -->
+        <aside class="card sidebar" data-sidebar>
+
+            <figure class="avatar">
+                <img src="./images/avatar.jpeg" alt="Emily Xie">
+            </figure>
+
+            <h1 class="sidebar-name">Emily Xie</h1>
+            <p class="sidebar-title">Software Engineer</p>
+
+            <div class="sidebar-rule"></div>
+
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <span class="contact-chip">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </span>
+                    <a href="mailto:emily.xietty@gmail.com">emily.xietty@gmail.com</a>
+                </li>
+                <li class="contact-item">
+                    <span class="contact-chip">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </span>
+                    <address>Seattle, WA</address>
+                </li>
+            </ul>
+
+            <ul class="social-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/emilyxietty/" class="social-link" aria-label="LinkedIn">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/emilyxietty" class="social-link" aria-label="GitHub">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@pianokaisen" class="social-link" aria-label="TikTok">
+                        <ion-icon name="logo-tiktok"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-rule"></div>
+
+            <h3 class="sidebar-section-title">A few things I love</h3>
+            <div class="sticker-row">
+                <span class="sticker">🎨 crafts</span>
+                <span class="sticker sticker--butter">🎵 music</span>
+                <span class="sticker sticker--lavender">🌸 anime</span>
+                <span class="sticker sticker--pink">🧋 bubble tea</span>
+                <span class="sticker sticker--butter">🍵 matcha</span>
+                <span class="sticker sticker--mint">🐶 dogs</span>
+            </div>
+        </aside>
 
 
+        <!-- ─── CONTENT ─────────────────────────────────────────── -->
+        <div class="content">
 
+            <nav class="navbar">
+                <a class="nav-link active" href="./index.html">About</a>
+                <a class="nav-link" href="./pages/resume.html">Resume</a>
+                <a class="nav-link" href="./pages/ghiblify.html">Ghiblify</a>
+                <a class="nav-link" href="./pages/play.html">Play</a>
+            </nav>
 
+            <section class="article">
+                <div class="article-card">
 
+                    <h2 class="typing typing--title" data-typing='["Hello world!"]'>
+                        <span class="typing-prompt">$</span><span class="typing-text"></span><span
+                            class="typing-caret"></span>
+                    </h2>
 
-  <!--
-    - custom js link
-  -->
-  <script src="./js/script.js"></script>
+                    <div class="page-intro">
+                        <p>
+                            I'm Emily. I currently work as a <strong>Software Engineer at TikTok</strong>
+                            in Seattle,
+                            where I build AI seller tools as part of the global e-commerce seller success team.
+                        </p>
+                        <p>
+                            Outside of work, I build Chrome extensions and small apps for fun.
+                            My biggest side project is <strong>Ghiblify</strong>, a Studio Ghibli–themed
+                            new tab page now on its second major release.
+                        </p>
+                        <!-- ─── CTA ─── -->
+                        <!-- <a class="cta-card"
+                            href="https://chromewebstore.google.com/detail/Ghiblify/kdaipjfpbngmcginhhahacjkkkpbaefh"
+                            target="_blank" rel="noopener">
+                            <span class="cta-icon">
+                                <img src="./images/soot_48.png" alt="" width="32" height="32">
+                            </span>
+                            <div class="cta-body">
+                                <p class="cta-title">Ghiblify on the Chrome Web Store</p>
+                                <p class="cta-text">A Studio Ghibli–inspired new tab, widgets, themes, 7 languages.</p>
+                            </div>
+                            <ion-icon class="cta-arrow" name="arrow-forward-outline"></ion-icon>
+                        </a> -->
+                        <p>
+                            In my free time I knit, crochet, scrapbook, and watch a lot of anime.
+                            I also play a handful of musical instruments. You can find me on TikTok
+                            at <a href="https://www.tiktok.com/@pianokaisen" target="_blank"
+                                rel="noopener"><strong>@pianokaisen</strong></a>.
+                            I used to be a competitive debater, but now mostly find myself yapping about my various
+                            hobbies.
+                        </p>
+                    </div>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                    <!-- ─── FAQ CAROUSEL ─── -->
+                    <div class="section">
+                        <h3 class="section-title">Infrequently Asked Questions</h3>
+
+                        <div class="carousel" data-faq tabindex="0" role="group" aria-label="Personal FAQ carousel">
+
+                            <div class="carousel-viewport">
+                                <ul class="carousel-track" data-faq-track>
+
+                                    <li class="faq-slide">
+                                        <article class="faq-card faq-card--with-image">
+                                            <div>
+                                                <p class="faq-q">What cartoon character do you relate to the most?</p>
+                                                <p class="faq-a">Crayon Shin-chan, I grew up with him. 💛</p>
+                                            </div>
+                                            <figure class="faq-card-image">
+                                                <img src="./images/shinchan.jpeg" alt="Crayon Shin-chan" loading="lazy">
+                                            </figure>
+                                        </article>
+                                    </li>
+
+                                    <li class="faq-slide">
+                                        <article class="faq-card">
+                                            <div>
+                                                <p class="faq-q">How did you improve your VO₂ max so much?</p>
+                                                <p class="faq-a">
+                                                    15–30 minutes of zone-2 cardio a couple times a week. VO₂-maxxing.
+                                                    🏃‍♀️
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </li>
+
+                                    <li class="faq-slide">
+                                        <article class="faq-card">
+                                            <div>
+                                                <p class="faq-q">Do you know any good restaurants in my area?</p>
+                                                <p class="faq-a">
+                                                    Add me on Beli (<strong>@emilyxietty</strong>), I was ranked #1
+                                                    in Richmond Hill. 🍜
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </li>
+
+                                    <li class="faq-slide">
+                                        <article class="faq-card">
+                                            <div>
+                                                <p class="faq-q">What are you thinking about right now?</p>
+                                                <p class="faq-a">Bubble tea and matcha. Always. 🧋🍵</p>
+                                            </div>
+                                        </article>
+                                    </li>
+
+                                    <li class="faq-slide">
+                                        <article class="faq-card faq-card--with-image">
+                                            <div>
+                                                <p class="faq-q">Do you have any pets?</p>
+                                                <p class="faq-a">Two very spoiled dogs! 🐶🐶</p>
+                                            </div>
+                                            <figure class="faq-card-image">
+                                                <img src="./images/dogs.jpeg" alt="Emily's two dogs" loading="lazy">
+                                            </figure>
+                                        </article>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <button class="carousel-btn carousel-btn--prev" type="button" data-faq-prev
+                                aria-label="Previous question">
+                                <ion-icon name="chevron-back-outline"></ion-icon>
+                            </button>
+                            <button class="carousel-btn carousel-btn--next" type="button" data-faq-next
+                                aria-label="Next question">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                            </button>
+
+                            <div class="carousel-dots" data-faq-dots></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ─── SCRIPTS ─── -->
+    <script src="./js/script.js?v=5"></script>
+
+    <!-- FAQ carousel -->
+    <script>
+        (function () {
+            var carousel = document.querySelector('[data-faq]');
+            if (!carousel) return;
+            var track = carousel.querySelector('[data-faq-track]');
+            var slides = Array.prototype.slice.call(track.children);
+            var prevBtn = carousel.querySelector('[data-faq-prev]');
+            var nextBtn = carousel.querySelector('[data-faq-next]');
+            var dotsWrap = carousel.querySelector('[data-faq-dots]');
+            if (!slides.length) return;
+
+            var index = 0;
+            var dots = slides.map(function (_, i) {
+                var d = document.createElement('button');
+                d.type = 'button';
+                d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                d.setAttribute('aria-label', 'Go to question ' + (i + 1));
+                d.addEventListener('click', function () {
+                    goTo(i);
+                });
+                dotsWrap.appendChild(d);
+                return d;
+            });
+
+            function update() {
+                track.style.transform = 'translateX(' + (-index * 100) + '%)';
+                dots.forEach(function (d, i) {
+                    d.classList.toggle('active', i === index);
+                });
+            }
+
+            function goTo(i) {
+                index = (i + slides.length) % slides.length;
+                update();
+            }
+
+            prevBtn.addEventListener('click', function () {
+                goTo(index - 1);
+            });
+            nextBtn.addEventListener('click', function () {
+                goTo(index + 1);
+            });
+            carousel.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowLeft') goTo(index - 1);
+                if (e.key === 'ArrowRight') goTo(index + 1);
+            });
+
+            var startX = null;
+            track.addEventListener('touchstart', function (e) {
+                startX = e.touches[0].clientX;
+            }, {
+                passive: true
+            });
+            track.addEventListener('touchend', function (e) {
+                if (startX === null) return;
+                var dx = e.changedTouches[0].clientX - startX;
+                if (Math.abs(dx) > 40) goTo(index + (dx < 0 ? 1 : -1));
+                startX = null;
+            });
+        })();
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

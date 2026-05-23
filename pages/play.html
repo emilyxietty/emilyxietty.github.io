@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume · Emily Xie</title>
+    <title>Play · Emily Xie</title>
 
     <link rel="shortcut icon" href="../images/soot_48.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css?v=17">
@@ -92,96 +92,98 @@
 
             <nav class="navbar">
                 <a class="nav-link" href="../index.html">About</a>
-                <a class="nav-link active" href="./resume.html">Resume</a>
+                <a class="nav-link" href="./resume.html">Resume</a>
                 <a class="nav-link" href="./ghiblify.html">Ghiblify</a>
-                <a class="nav-link" href="./play.html">Play</a>
+                <a class="nav-link active" href="./play.html">Play</a>
             </nav>
 
             <section class="article">
                 <div class="article-card">
 
-                    <h2 class="typing typing--title" data-typing='["Resume"]'>
+                    <h2 class="typing typing--title" data-typing='["Play"]'>
                         <span class="typing-prompt">$</span><span class="typing-text"></span><span
                             class="typing-caret"></span>
                     </h2>
 
-                    <div class="section">
-                        <h3 class="section-title">Experience</h3>
-                        <ol class="timeline">
-                            <li class="timeline-item">
-                                <p class="timeline-role">Software Engineer</p>
-                                <p class="timeline-meta">
-                                    <span class="at">TikTok</span><span>Seattle, WA</span><span>June 2025 –
-                                        Present</span>
-                                </p>
-                                <p class="timeline-text">Seller AI Tools team.</p>
-                            </li>
+                    <p class="game-intro">
+                        Two little browser games I'm experimenting with. The first is a 3D glider
+                        in three.js. The second is a 2D arcade catcher: a soot sprite
+                        collects falling konpeito candy and dodges coal.
+                    </p>
 
-                            <li class="timeline-item">
-                                <p class="timeline-role">Software Developer</p>
-                                <p class="timeline-meta">
-                                    <span class="at">Bell Canada</span><span>Toronto, ON</span><span>May 2023 – June
-                                        2025</span>
-                                </p>
-                                <p class="timeline-text">
-                                    Network and Technology Services Business Intelligence (NTS BIG)
-                                    Team, and Customer Profile Team for Crave TV.
-                                </p>
-                            </li>
+                    <!-- ─── GAME 1: Sky Glider ─── -->
+                    <div class="section game-section">
+                        <h3 class="section-title">Sky Glider</h3>
 
-                            <li class="timeline-item">
-                                <p class="timeline-role">Business Analyst Intern</p>
-                                <p class="timeline-meta">
-                                    <span class="at">Bell Canada</span><span>Toronto, ON</span><span>May 2022 – Aug
-                                        2022</span>
+                        <div class="game-wrap" data-game>
+                            <canvas class="game-canvas" data-game-canvas></canvas>
+                            <div class="game-flash" data-game-flash></div>
+
+                            <div class="game-hud game-hide" data-game-hud>
+                                <div class="game-score">
+                                    <span class="game-score-label">Score</span>
+                                    <span class="game-score-value" data-game-score>0</span>
+                                </div>
+                                <div class="game-lives" data-game-lives>
+                                    <ion-icon class="game-heart" name="heart"></ion-icon>
+                                    <ion-icon class="game-heart" name="heart"></ion-icon>
+                                    <ion-icon class="game-heart" name="heart"></ion-icon>
+                                </div>
+                            </div>
+
+                            <div class="game-overlay" data-game-start>
+                                <h4 class="game-title">Sky Glider</h4>
+                                <p class="game-tagline">Drift through the clouds, gather light, dodge the storms.</p>
+                                <button class="btn game-btn" type="button" data-game-play>Play</button>
+                                <p class="game-hint">Steer with arrow keys or WASD, or just move your mouse. On a
+                                    phone, drag.</p>
+                            </div>
+
+                            <div class="game-overlay game-overlay--over game-hide" data-game-over>
+                                <h4 class="game-title">Back to earth</h4>
+                                <p class="game-result">
+                                    Score <span data-game-final>0</span> · Best <span data-game-best>0</span>
                                 </p>
-                                <p class="timeline-text">
-                                    Network and Technology Services Business Intelligence (NTS BIG) Team.
-                                </p>
-                            </li>
-                        </ol>
+                                <button class="btn game-btn" type="button" data-game-again>Play again</button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="section">
-                        <h3 class="section-title">Education</h3>
-                        <ol class="timeline">
-                            <li class="timeline-item">
-                                <p class="timeline-role">University of Western Ontario</p>
-                                <p class="timeline-meta"><span>2018 – 2023</span></p>
-                                <p class="timeline-text">BSc. Computer Science · Min. Psychology</p>
+                    <!-- ─── GAME 2: Cloud Catcher ─── -->
+                    <div class="section game-section">
+                        <h3 class="section-title">Cloud Catcher</h3>
 
-                                <p class="timeline-detail-title">Debate</p>
-                                <p class="timeline-detail-text">
-                                    2× Canadian Public Speaking Champion · NA Champs breaking team ·
-                                    Worlds delegate · National Ombudsperson '19–23 · UWO Debate VP '18–20.
+                        <div class="game-wrap" data-catch>
+                            <canvas class="game-canvas" data-catch-canvas></canvas>
+                            <div class="game-flash" data-catch-flash></div>
+
+                            <div class="game-hud game-hide" data-catch-hud>
+                                <div class="game-score">
+                                    <span class="game-score-label">Score</span>
+                                    <span class="game-score-value" data-catch-score>0</span>
+                                </div>
+                                <div class="game-lives" data-catch-lives>
+                                    <ion-icon class="game-heart" name="heart"></ion-icon>
+                                    <ion-icon class="game-heart" name="heart"></ion-icon>
+                                    <ion-icon class="game-heart" name="heart"></ion-icon>
+                                </div>
+                            </div>
+
+                            <div class="game-overlay" data-catch-start>
+                                <h4 class="game-title">Cloud Catcher</h4>
+                                <p class="game-tagline">Catch the sugar-star candy, and dodge the falling coal.</p>
+                                <button class="btn game-btn" type="button" data-catch-play>Play</button>
+                                <p class="game-hint">Scurry left and right with arrow keys, or drag with your mouse or
+                                    finger.</p>
+                            </div>
+
+                            <div class="game-overlay game-overlay--over game-hide" data-catch-over>
+                                <h4 class="game-title">Buried in coal</h4>
+                                <p class="game-result">
+                                    Score <span data-catch-final>0</span> · Best <span data-catch-best>0</span>
                                 </p>
-
-                                <p class="timeline-detail-title">CAISA Fashion Show</p>
-                                <p class="timeline-detail-text">
-                                    Graphics Director '19–22, Creative Director '22–23.
-                                </p>
-
-                                <p class="timeline-detail-title">Western Orientation</p>
-                                <p class="timeline-detail-text">
-                                    Residence Soph '19–20, Off-Campus Soph '21–23, Media Captain.
-                                </p>
-                            </li>
-                        </ol>
-                    </div>
-
-                    <div class="section">
-                        <h3 class="section-title">Things I work with</h3>
-                        <div class="sticker-row">
-                            <span class="sticker">TypeScript</span>
-                            <span class="sticker sticker--pink">React</span>
-                            <span class="sticker sticker--mint">Python</span>
-                            <span class="sticker sticker--butter">Java</span>
-                            <span class="sticker sticker--lavender">SQL</span>
-                            <span class="sticker">Node.js</span>
-                            <span class="sticker sticker--mint">Vite</span>
-                            <span class="sticker sticker--butter">Tailwind</span>
-                            <span class="sticker sticker--pink">AWS</span>
-                            <span class="sticker sticker--lavender">Figma</span>
+                                <button class="btn game-btn" type="button" data-catch-again>Play again</button>
+                            </div>
                         </div>
                     </div>
 
@@ -191,6 +193,9 @@
     </div>
 
     <script src="../js/script.js?v=5"></script>
+    <script type="module" src="../js/skyglider.js"></script>
+    <script src="../js/cloudcatcher.js?v=3"></script>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
