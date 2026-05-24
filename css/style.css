@@ -478,6 +478,13 @@ body {
     font-weight: 700;
 }
 
+.sidebar-section-note {
+    margin: -4px 0 10px;
+    font-size: 11px;
+    font-style: italic;
+    color: var(--ink-faint);
+}
+
 .sidebar .sticker-row {
     justify-content: center;
     gap: 6px;
@@ -759,28 +766,52 @@ body {
     box-shadow: 3px 3px 0 var(--ink);
 }
 
-/* ─── emoji bubble-pop (spawned by JS on .sticker hover) ─── */
+/* tech-stack icon inside a .sticker — rendered as a mask so it picks up
+   the sticker's text color (no fill juggling needed). Set --icon per
+   sticker via inline style: --icon: url('/images/icons/react.svg'). */
+.sticker-icon {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 auto;
+    display: inline-block;
+    background-color: currentColor;
+    -webkit-mask: var(--icon) center / contain no-repeat;
+            mask: var(--icon) center / contain no-repeat;
+}
+
+/* ─── emoji explosion (spawned by JS on .sticker hover) ─── */
 .emoji-burst {
     position: fixed;
     font-size: 22px;
     pointer-events: none;
     user-select: none;
     z-index: 9999;
-    animation: bubble-pop 0.7s cubic-bezier(.34, 1.56, .64, 1) forwards;
+    animation: emoji-burst 1s cubic-bezier(.16, .8, .3, 1) forwards;
     will-change: transform, opacity;
 }
 
-@keyframes bubble-pop {
+/* SVG-icon variant — rendered as a mask so the burst is an ink-colored
+   silhouette of the same icon shown in the sticker. */
+.emoji-burst--icon {
+    width: 26px;
+    height: 26px;
+    font-size: 0;
+    background-color: var(--ink);
+    -webkit-mask: var(--icon) center / contain no-repeat;
+            mask: var(--icon) center / contain no-repeat;
+}
+
+@keyframes emoji-burst {
     0% {
-        transform: translate(-50%, -50%) scale(0.2);
+        transform: translate(-50%, -50%) scale(0.45) rotate(0deg);
         opacity: 0;
     }
-    35% {
-        transform: translate(calc(-50% + var(--dx) * 0.4), calc(-50% + var(--dy) * 0.4)) scale(1.35);
+    18% {
+        transform: translate(-50%, -50%) scale(1.2) rotate(calc(var(--rot) * 0.2));
         opacity: 1;
     }
     100% {
-        transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0.9);
+        transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0.8) rotate(var(--rot));
         opacity: 0;
     }
 }
@@ -1010,6 +1041,22 @@ body {
     margin-top: 2px;
 }
 
+/* small tech-stack row under a job's role/meta */
+.timeline-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 8px 0 6px;
+}
+.timeline-stack .sticker {
+    font-size: 11px;
+    padding: 3px 9px;
+}
+.timeline-stack .sticker-icon {
+    width: 11px;
+    height: 11px;
+}
+
 
 /* ============ CAROUSEL SKELETON (FAQ + Ghiblify share) ============ */
 
@@ -1183,6 +1230,18 @@ body {
     color: var(--coral);
     font-weight: 700;
 }
+
+.faq-a a {
+    color: hsl(8, 55%, 42%);
+    text-decoration: underline dotted hsl(8, 55%, 60%) 1.5px;
+    text-underline-offset: 3px;
+    transition: color .15s ease, text-decoration-color .15s ease;
+}
+.faq-a a:hover {
+    color: var(--ink);
+    text-decoration-color: var(--ink);
+}
+.faq-a a strong { color: inherit; }
 
 .faq-card-image {
     position: relative;
@@ -1479,7 +1538,6 @@ body {
         top: 22px;
         max-height: calc(100vh - 44px);
         overflow-y: auto;
-        padding-right: 4px;
     }
 
     .content {
@@ -1496,9 +1554,6 @@ body {
            against either. */
         padding-right: 16px;
         margin-right: -16px;
-        /* breathing room at the bottom so the card + its offset shadow
-           aren't clipped when scrolled to the end */
-        padding-bottom: 18px;
     }
 
     /* subtle scrollbars inside scrolling regions */

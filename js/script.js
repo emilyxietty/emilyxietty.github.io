@@ -39,35 +39,44 @@
   }
 
   stickers.forEach(function (sticker) {
+    // pre-resolve what this sticker bursts with: prefer a real SVG icon
+    // from a nested .sticker-icon, then data-emoji, then leading emoji.
+    var iconEl  = sticker.querySelector('.sticker-icon');
+    var iconRaw = iconEl ? iconEl.style.getPropertyValue('--icon').trim() : '';
+    var emoji   = sticker.dataset.emoji || leadingEmoji(sticker.textContent.trim());
+    if (!iconRaw && !emoji) return;
+
     var nextOk = 0;
     sticker.addEventListener('mouseenter', function () {
       var now = Date.now();
       if (now < nextOk) return;
       nextOk = now + 350;
 
-      var emoji = leadingEmoji(sticker.textContent.trim());
-      if (!emoji) return;
-
       var rect = sticker.getBoundingClientRect();
       var cx = rect.left + rect.width / 2;
       var cy = rect.top + rect.height / 2;
-      var n = 3;
+      var n = 10;
 
       for (var i = 0; i < n; i++) {
         var el = document.createElement('span');
-        el.className = 'emoji-burst';
-        el.textContent = emoji;
-        // small lateral spread so the 3 bubbles don't stack perfectly
-        var dx = (i - (n - 1) / 2) * 14 + (Math.random() - 0.5) * 6;
-        var dy = -(28 + Math.random() * 18);    // float upward as it pops
+        if (iconRaw) {
+          el.className = 'emoji-burst emoji-burst--icon';
+          el.style.setProperty('--icon', iconRaw);
+        } else {
+          el.className = 'emoji-burst';
+          el.textContent = emoji;
+        }
+        var angle = (i / n) * Math.PI * 2 + (Math.random() - 0.5) * 0.45;
+        var dist  = 55 + Math.random() * 80;
         el.style.left = cx + 'px';
         el.style.top  = cy + 'px';
-        el.style.setProperty('--dx', dx.toFixed(1) + 'px');
-        el.style.setProperty('--dy', dy.toFixed(1) + 'px');
-        el.style.animationDelay = (i * 0.06).toFixed(2) + 's';
+        el.style.setProperty('--dx',  (Math.cos(angle) * dist).toFixed(1) + 'px');
+        el.style.setProperty('--dy',  (Math.sin(angle) * dist).toFixed(1) + 'px');
+        el.style.setProperty('--rot', ((Math.random() - 0.5) * 110).toFixed(1) + 'deg');
+        el.style.animationDelay = (Math.random() * 0.08).toFixed(3) + 's';
         document.body.appendChild(el);
         (function (node) {
-          setTimeout(function () { node.remove(); }, 900);
+          setTimeout(function () { node.remove(); }, 1300);
         })(el);
       }
     });
