@@ -19,6 +19,7 @@
   }
 })();
 
+
 /* ─── emoji burst on sticker hover ───────────────────────────────────
  * Hovering a .sticker fires its leading emoji outward like confetti.
  * Throttled per-sticker so a quick re-enter doesn't spam the DOM.

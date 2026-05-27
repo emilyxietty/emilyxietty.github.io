@@ -279,12 +279,12 @@ body {
     padding: 22px 24px;
     display: grid;
     gap: 24px;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);   /* never wider than the row */
 }
 
 @media (min-width: 980px) {
     .page {
-        grid-template-columns: 320px 1fr;
+        grid-template-columns: 320px minmax(0, 1fr);
         gap: 28px;
         padding: 26px 32px;
     }
@@ -336,6 +336,7 @@ body {
 .sidebar {
     align-self: start;
     text-align: center;
+    min-width: 0;            /* lets grid items shrink below their min-content */
 }
 
 /* rounded-square avatar with a soft pastel ring */
@@ -483,6 +484,14 @@ body {
     font-size: 11px;
     font-style: italic;
     color: var(--ink-faint);
+}
+
+/* sidebar sticker group — title on top, stickers wrap below */
+.sidebar-section {
+    margin-top: 12px;
+}
+.sidebar-section .sidebar-section-title {
+    margin: 0 0 8px;
 }
 
 .sidebar .sticker-row {
@@ -1046,6 +1055,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    padding: 2px 0 6px;
     margin: 8px 0 6px;
 }
 .timeline-stack .sticker {
@@ -1577,6 +1587,49 @@ body {
     .article::-webkit-scrollbar-thumb:hover {
         background: hsla(225, 30%, 50%, 0.45);
     }
+}
+
+
+/* ============ SIDEBAR IDENTITY ROW (avatar + name/title/socials) ============ */
+
+/* sidebar identity block — avatar centered on top, name + title +
+   socials stacked under it. Same layout on every viewport. */
+.sidebar-id {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+.sidebar-id .avatar {
+    margin: 0;
+}
+.sidebar-id-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.sidebar-id-text .sidebar-name {
+    margin: 0;
+    text-align: center;
+}
+.sidebar-id-text .sidebar-title {
+    align-self: center;
+}
+.sidebar-id-text .social-list {
+    justify-content: center;
+    margin-top: 2px;
+}
+
+
+/* ============ SIDEBAR VISIBILITY ============ */
+
+/* On small screens the sidebar is only shown on the home page; other
+   pages hide it so the article gets the full column. */
+@media (max-width: 979px) {
+    body:not(.is-home) .sidebar { display: none; }
 }
 
 
