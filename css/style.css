@@ -1068,7 +1068,7 @@ body {
 }
 
 
-/* ============ CAROUSEL SKELETON (FAQ + Ghiblify share) ============ */
+/* ============ CAROUSEL SKELETON (FAQ) ============ */
 
 .carousel {
     position: relative;
@@ -1337,16 +1337,241 @@ body {
     font-size: 14px;
 }
 
-/* Ghiblify screenshot carousel reuses .carousel-* */
-.carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+/* ============ GHIBLIFY LIVE DEMO ============ */
+
+/* A faux browser window holding the real extension in an iframe. The
+   frame is always laid out at DEMO_W x DEMO_H (see js in ghiblify.html)
+   and CSS-scaled down to the column, so the app sees a desktop-sized
+   viewport instead of reflowing its widgets into a phone layout. */
+.demo-window {
+    position: relative;
+    margin-top: 12px;
+    border-radius: 14px;
+    border: 2px solid var(--ink);
+    background: var(--paper-soft);
+    box-shadow: 4px 4px 0 var(--sky);
+    overflow: hidden;
+}
+
+.demo-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 34px;
+    padding: 0 12px;
+    background: hsla(0, 0%, 0%, 0.04);
+    border-bottom: 1px solid hsla(225, 30%, 35%, 0.12);
+}
+
+.demo-dots {
+    flex: none;
+    width: 48px;
+    height: 10px;
+    background:
+        radial-gradient(circle at 5px 5px, #ff6e67 0 5px, transparent 5.5px),
+        radial-gradient(circle at 24px 5px, #ffce47 0 5px, transparent 5.5px),
+        radial-gradient(circle at 43px 5px, #5bd363 0 5px, transparent 5.5px);
+}
+
+.demo-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 180px;
+    padding: 3px 12px;
+    border: 1.5px solid var(--ink);
+    border-radius: 8px;
+    background: var(--paper);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.demo-tab img {
+    width: 13px;
+    height: 13px;
     display: block;
 }
 
-.ghiblify-screens .carousel-slide {
+.demo-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+}
+
+.demo-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 11px;
+    border: 1.5px solid var(--ink);
+    border-radius: 999px;
+    background: var(--paper);
+    font-family: var(--ff-body);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink);
+    cursor: pointer;
+    transition: transform .12s ease, background .12s ease;
+}
+
+.demo-chip:hover {
+    transform: translateY(-1px);
+    background: var(--butter-soft);
+}
+
+.demo-chip ion-icon {
+    font-size: 13px;
+}
+
+.demo-stage {
+    position: relative;
     aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #1f2620;
+}
+
+.demo-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    transform-origin: top left;
+    /* --demo-w/--demo-h/--demo-scale are set from js */
+    width: var(--demo-w, 1440px);
+    height: var(--demo-h, 900px);
+    transform: scale(var(--demo-scale, 1));
+}
+
+/* Poster shown until the visitor opts in - the demo pulls a ~5 MB
+   bundle and a full-resolution film still, which nobody browsing the
+   page should pay for uninvited. */
+.demo-poster {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    border: 0;
+    text-align: center;
+    color: var(--paper);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    font-family: var(--ff-body);
+}
+
+.demo-poster::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: hsla(225, 35%, 12%, 0.5);
+    backdrop-filter: blur(1px);
+}
+
+.demo-poster>* {
+    position: relative;
+}
+
+.demo-poster-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 2px solid var(--ink);
+    background: var(--butter);
+    box-shadow: 3px 3px 0 var(--ink);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.demo-poster:hover .demo-poster-btn {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--ink);
+}
+
+.demo-poster-note {
+    max-width: 40ch;
+    font-size: 12px;
+    line-height: 1.5;
+    color: hsla(40, 60%, 96%, 0.85);
+    text-shadow: 0 1px 3px hsla(225, 40%, 10%, 0.6);
+}
+
+.demo-loading {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: hsla(40, 60%, 96%, 0.9);
+    pointer-events: none;
+}
+
+.demo-hint {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--ink-faint);
+}
+
+.demo-hint kbd {
+    display: inline-block;
+    padding: 0 5px;
+    border: 1.5px solid var(--ink-faint);
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    background: var(--paper);
+    font-family: var(--ff-body);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink-soft);
+}
+
+/* Fullscreen: hand the app the real viewport at 1:1 instead of a
+   scaled-down stage. The title bar stays so there's a visible way out
+   besides Esc. */
+.demo-window:fullscreen {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: var(--ink);
+}
+
+.demo-window:fullscreen .demo-stage {
+    flex: 1;
+    aspect-ratio: auto;
+}
+
+.demo-window:fullscreen .demo-frame {
+    width: 100%;
+    height: 100%;
+    transform: none;
+}
+
+@media (max-width: 640px) {
+    .demo-tab {
+        display: none;
+    }
 }
 
 

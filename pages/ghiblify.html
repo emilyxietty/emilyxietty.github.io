@@ -8,7 +8,7 @@
   <title>Ghiblify · Emily Xie</title>
 
   <link rel="shortcut icon" href="../images/soot_48.png" type="image/x-icon">
-  <link rel="stylesheet" href="../css/style.css?v=34">
+  <link rel="stylesheet" href="../css/style.css?v=36">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,12 +119,6 @@
               a calm, customizable dashboard of widgets over a rotating background of
               Ghibli film stills.
             </p>
-            <p>
-              v2 is a complete rewrite in <strong>React 19 + TypeScript</strong>, bundled
-              with <strong>Vite</strong>. Every widget is draggable, resizable, and
-              edit-mode aware, clock, weather, todos, pomodoro, sticky notes, quick links,
-              and a bookmarks panel that slides in from the right with cross-folder search.
-            </p>
           </div>
 
           <a class="cta-card"
@@ -140,74 +134,60 @@
             <ion-icon class="cta-arrow" name="arrow-forward-outline"></ion-icon>
           </a>
 
-          <div class="section ghiblify-screens">
-            <h3 class="section-title">See it in action</h3>
+          <div class="section">
+            <h3 class="section-title">Try it right here</h3>
+            <p class="game-intro">
+              The real extension, running in the page. Everything works except saving,
+              this copy keeps its state in memory, so a reload gives you a fresh tab.
+            </p>
 
-            <div class="carousel" data-carousel role="group" aria-label="Ghiblify screenshots">
-              <div class="carousel-viewport">
-                <ul class="carousel-track" data-carousel-track>
-                  <li class="carousel-slide">
-                    <img src="../ghiblify/promo/screenshot-1.webp"
-                         alt="Ghiblify new tab page, a Studio Ghibli-inspired Chrome extension" loading="lazy">
-                  </li>
-                  <li class="carousel-slide">
-                    <img src="../ghiblify/promo/screenshot-2.webp"
-                         alt="Over 1000 Ghibli film stills to choose from as rotating backgrounds" loading="lazy">
-                  </li>
-                  <li class="carousel-slide">
-                    <img src="../ghiblify/promo/screenshot-3.webp"
-                         alt="Drag widgets, switch palettes, and swap cursors" loading="lazy">
-                  </li>
-                  <li class="carousel-slide">
-                    <img src="../ghiblify/promo/screenshot-4.webp"
-                         alt="Many widgets to choose from to customize your new tab" loading="lazy">
-                  </li>
-                  <li class="carousel-slide">
-                    <img src="../ghiblify/promo/screenshot-5.webp"
-                         alt="Ghiblify, a little magic in every tab" loading="lazy">
-                  </li>
-                  <li class="carousel-slide">
-                    <img src="../ghiblify/promo/large-tile.webp"
-                         alt="Ghiblify promotional banner" loading="lazy">
-                  </li>
-                </ul>
+            <div class="demo-window" data-demo>
+              <div class="demo-bar">
+                <span class="demo-dots" aria-hidden="true"></span>
+                <span class="demo-tab">
+                  <img src="../images/soot_48.png" alt="" width="13" height="13">
+                  New Tab
+                </span>
+                <div class="demo-actions">
+                  <button class="demo-chip" type="button" data-demo-reset hidden>
+                    <ion-icon name="refresh-outline"></ion-icon>
+                    Reset
+                  </button>
+                  <button class="demo-chip" type="button" data-demo-fullscreen>
+                    <ion-icon name="expand-outline" data-demo-fs-icon></ion-icon>
+                    <span data-demo-fs-label>Fullscreen</span>
+                  </button>
+                </div>
               </div>
 
-              <button class="carousel-btn carousel-btn--prev" type="button"
-                      data-carousel-prev aria-label="Previous screenshot">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-              </button>
-              <button class="carousel-btn carousel-btn--next" type="button"
-                      data-carousel-next aria-label="Next screenshot">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-              </button>
+              <div class="demo-stage" data-demo-stage>
+                <iframe class="demo-frame"
+                        data-demo-frame
+                        title="Ghiblify new tab demo"
+                        allow="fullscreen; clipboard-write"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        loading="lazy"></iframe>
 
-              <div class="carousel-dots" data-carousel-dots></div>
+                <button class="demo-poster" type="button" data-demo-poster
+                        style="background-image: url('../ghiblify/promo/screenshot-1.webp');">
+                  <span class="demo-poster-btn">
+                    <ion-icon name="play-outline"></ion-icon>
+                    Launch the live demo
+                  </span>
+                  <span class="demo-poster-note">
+                    Loads about 5&nbsp;MB. Best on a desktop-sized screen, or hit
+                    fullscreen once it's running.
+                  </span>
+                </button>
+              </div>
             </div>
-          </div>
 
-          <div class="section">
-            <h3 class="section-title">What's in v2</h3>
-            <ul class="feature-list">
-              <li><strong>12 widgets</strong> with consistent drag, resize, and edit modes.</li>
-              <li><strong>14 themed palettes</strong> including a glassy Frost mode and a high-contrast accessibility theme.</li>
-              <li><strong>7 languages</strong>, English, 日本語, Español, Français, 中文, Português, 한국어.</li>
-              <li><strong>Cursor animations</strong>, soot sprites, sparkles, petals, leaves.</li>
-              <li><strong>45 background images</strong> bundled locally so they load reliably worldwide.</li>
-              <li><strong>Cross-folder bookmarks search</strong> in a slide-in side panel.</li>
-            </ul>
-          </div>
-
-          <div class="section">
-            <h3 class="section-title">Built with</h3>
-            <div class="sticker-row">
-              <span class="sticker">React 19</span>
-              <span class="sticker sticker--pink">TypeScript</span>
-              <span class="sticker sticker--mint">Vite</span>
-              <span class="sticker sticker--butter">Chrome MV3</span>
-              <span class="sticker sticker--lavender">Tailwind</span>
-              <span class="sticker">i18n</span>
-            </div>
+            <p class="demo-hint">
+              <span>Hold <kbd>d</kbd> and drag to move widgets</span>
+              <span>Right-click a widget to edit it</span>
+              <span>Hover the left edge for the widget tray</span>
+              <span>Hover the right edge for bookmarks</span>
+            </p>
           </div>
 
         </div>
@@ -217,50 +197,97 @@
 
   <script src="../js/script.js?v=16"></script>
 
-  <!-- Ghiblify screenshot carousel -->
+  <!-- Live Ghiblify demo: scaled iframe + fullscreen -->
   <script>
     (function () {
-      var carousel = document.querySelector('[data-carousel]');
-      if (!carousel) return;
-      var track   = carousel.querySelector('[data-carousel-track]');
-      var slides  = Array.prototype.slice.call(track.children);
-      var prevBtn = carousel.querySelector('[data-carousel-prev]');
-      var nextBtn = carousel.querySelector('[data-carousel-next]');
-      var dotsWrap= carousel.querySelector('[data-carousel-dots]');
-      if (!slides.length) return;
+      var win = document.querySelector('[data-demo]');
+      if (!win) return;
 
-      var index = 0;
-      var dots = slides.map(function (_, i) {
-        var d = document.createElement('button');
-        d.type = 'button';
-        d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-        d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        d.addEventListener('click', function () { goTo(i); });
-        dotsWrap.appendChild(d);
-        return d;
-      });
+      var stage      = win.querySelector('[data-demo-stage]');
+      var frame      = win.querySelector('[data-demo-frame]');
+      var poster     = win.querySelector('[data-demo-poster]');
+      var resetBtn   = win.querySelector('[data-demo-reset]');
+      var fsBtn      = win.querySelector('[data-demo-fullscreen]');
+      var fsIcon     = win.querySelector('[data-demo-fs-icon]');
+      var fsLabel    = win.querySelector('[data-demo-fs-label]');
 
-      function update() {
-        track.style.transform = 'translateX(' + (-index * 100) + '%)';
-        dots.forEach(function (d, i) { d.classList.toggle('active', i === index); });
+      var SRC = '../ghiblify/demo/index.html';
+      // The app positions widgets in vw/vh, so the iframe's own
+      // viewport is what decides the layout. Pin it to a desktop size
+      // and scale the whole frame down to the column - shrinking the
+      // iframe itself instead would give the app a phone-shaped
+      // viewport and a layout no user actually sees.
+      var DEMO_W = 1440;
+      var DEMO_H = 900;
+      var launched = false;
+
+      stage.style.setProperty('--demo-w', DEMO_W + 'px');
+      stage.style.setProperty('--demo-h', DEMO_H + 'px');
+
+      function isFullscreen() {
+        return (document.fullscreenElement || document.webkitFullscreenElement) === win;
       }
-      function goTo(i) { index = (i + slides.length) % slides.length; update(); }
 
-      prevBtn.addEventListener('click', function () { goTo(index - 1); });
-      nextBtn.addEventListener('click', function () { goTo(index + 1); });
-      carousel.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft')  goTo(index - 1);
-        if (e.key === 'ArrowRight') goTo(index + 1);
+      function fit() {
+        // Fullscreen runs the app 1:1 against the real screen; the CSS
+        // for :fullscreen drops the transform, so scale is irrelevant there.
+        var scale = isFullscreen() ? 1 : stage.clientWidth / DEMO_W;
+        stage.style.setProperty('--demo-scale', scale);
+      }
+
+      function launch() {
+        if (!launched) {
+          launched = true;
+          frame.src = SRC;
+          resetBtn.hidden = false;
+          poster.insertAdjacentHTML('afterend',
+            '<div class="demo-loading" data-demo-loading>waking the soot sprites…</div>');
+          frame.addEventListener('load', function () {
+            var loading = stage.querySelector('[data-demo-loading]');
+            if (loading) loading.remove();
+            // Keyboard shortcuts (hold `d` to drag) only reach the app
+            // once the iframe document has focus.
+            try { frame.contentWindow.focus(); } catch (e) { /* cross-origin guard */ }
+          });
+          poster.remove();
+        }
+        fit();
+      }
+
+      poster.addEventListener('click', launch);
+
+      resetBtn.addEventListener('click', function () {
+        // Nothing is persisted, so reloading the frame is a full reset:
+        // default layout, fresh background, empty todos.
+        frame.src = SRC;
       });
 
-      var startX = null;
-      track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
-      track.addEventListener('touchend', function (e) {
-        if (startX === null) return;
-        var dx = e.changedTouches[0].clientX - startX;
-        if (Math.abs(dx) > 40) goTo(index + (dx < 0 ? 1 : -1));
-        startX = null;
+      fsBtn.addEventListener('click', function () {
+        launch();
+        if (isFullscreen()) {
+          (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+          return;
+        }
+        var request = win.requestFullscreen || win.webkitRequestFullscreen;
+        if (!request) return;
+        var result = request.call(win);
+        if (result && result.catch) result.catch(function () { /* denied */ });
       });
+
+      function syncFullscreenUi() {
+        var on = isFullscreen();
+        fsIcon.setAttribute('name', on ? 'contract-outline' : 'expand-outline');
+        fsLabel.textContent = on ? 'Exit' : 'Fullscreen';
+        fit();
+        if (on) { try { frame.contentWindow.focus(); } catch (e) { /* ignore */ } }
+      }
+
+      document.addEventListener('fullscreenchange', syncFullscreenUi);
+      document.addEventListener('webkitfullscreenchange', syncFullscreenUi);
+
+      if (window.ResizeObserver) new ResizeObserver(fit).observe(stage);
+      window.addEventListener('resize', fit);
+      fit();
     })();
   </script>
 
