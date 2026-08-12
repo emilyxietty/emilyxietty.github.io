@@ -1,4 +1,4 @@
-# Superseded GIF originals kept on disk after WebP conversion. The
-# served copies are ghiblify/gifs/*.webp; these are the sources they
-# were encoded from and must not enter git history (~91 MB).
-ghiblify/gifs/_originals/
+# Superseded GIF originals kept on disk after WebP conversion. The served
+# copies live under ghiblify/backgrounds/<film>/; these are the sources
+# they were encoded from and must not enter git history (~91 MB).
+ghiblify/_originals/
